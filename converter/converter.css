@@ -1,0 +1,174 @@
+﻿body {
+    background-image: url(bg.png);
+}
+
+header {
+    position: relative;
+    text-align: center;
+    line-height: 2em;
+    width: 100%;
+    top: -10px;
+    left:0;
+}
+
+h1 {
+    cursor: default;
+    font-family: 'Iceland', cursive;
+    font-size: 4em;
+    color: #808080;
+}
+
+ul {
+    position: relative;
+    list-style-type: none;
+    border-top: 2px solid #713535;
+    border-bottom: 2px solid #713535;
+    font-family: 'Port Lligat Slab', serif;
+    text-align: center;
+    padding: 0;
+    cursor: default;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.small {
+    margin: 0;
+    padding: 0;
+    font-size: .3em;
+}
+
+li {
+    font-size: 3.3em;
+}
+
+    li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    li a:hover, li a:focus {
+        color: #713535;
+    }
+
+.unitBox {
+    background-color: #fff;
+    font-size: 1.7em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    display: none;
+}
+
+.unitBox, input, select{
+    font-family: 'Anaheim', sans-serif;
+    color: #000;
+}
+
+    .unitBox > div {
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+.layer2 > div {
+    position: relative;
+    top: 1.5em;
+}
+.layer3 > div {
+    position: relative;
+    top: 3.5em;
+}
+
+select {
+    font-size: 1em;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+    .short {
+        width: 180px;
+    }
+
+.long {
+    width: 220px;
+}
+
+input, .result {
+    position: relative;
+    font-size: 2em;
+    display: block;
+    margin: auto;
+}
+
+input {
+    color: #3775a4;
+    border-color: #808080;
+    border-style: solid;
+    width: 10em;
+    text-align: center;
+}
+
+:-moz-placeholder  {
+    color: #e8e8e8;
+}
+::-moz-placeholder {
+    color: #e8e8e8;
+}
+:-ms-input-placeholder {
+    color: #e8e8e8;
+}
+::-webkit-input-placeholder {
+    color: #e8e8e8;
+}
+
+.result {
+    color: #3775a4;
+    border-color: #808080;
+    border-style: solid;
+    width: 10em;
+    text-align: center;
+}
+
+
+
+.hdng {
+    position: relative;
+    top: 0;
+    text-align: center;
+    font-size: 2em;
+    height: 1.5em;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #713535;
+    cursor: default;
+}
+
+.layer2 {
+    position: relative;   
+    top: 1em;
+    height: 7.5em;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.layer3 {
+    position: relative;
+    top: 0;
+    height: 9.5em;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.close {
+    position: relative;
+    right: 0;
+    color: #c75858;
+    font-size: 2em;
+    text-align: center;
+    height: 1.5em;
+    border-top: 1px solid #000;
+    cursor: pointer;
+}

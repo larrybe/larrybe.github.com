@@ -1,0 +1,77 @@
+﻿.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hover, .active, .click {
+    margin: auto;
+    padding: 10px;
+    background-color: #0094ff;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+}
+
+    .hover:hover, .active:active, .msdn {
+        background-color: #fff;
+        color: #0094ff;
+    }
+
+        .hover:hover ~ .bg {
+            background-image: url(black_white_bars.gif);
+            background-size: cover;
+        }
+
+        .active:active ~ .bg{
+            background-image: url(color_bars.png);
+            background-size: cover;
+        }
+
+.clicked {
+    background-color: #fff;
+    color: #0094ff;
+}
+
+.clickedbg {
+    background-image: url(mjxb.gif);
+    background-size: cover;
+}
+
+.attribution {
+    position: absolute;
+    height: 2em;
+    width: 3em;
+    bottom: 10px;
+    right: 10px;
+    background-color: #0094ff;
+    color: #fff;   
+    overflow: hidden;
+    -o-transition: height, width .2s;
+    -moz-transition: height, width .2s;
+    -webkit-transition: height, width .2s;
+    transition: height, width .2s;
+}
+
+    .attribution:hover {
+        width: 11em;
+        height: 14em;
+    }
+
+    .attribution p {
+        font-size: 14px;
+    }
+
+    .attribution a {
+        text-decoration: none;
+        background-color: #fff;
+        color: #0094ff;
+        margin: 3px;
+    }
+
+        .attribution a:hover {
+            font-size: 18px;
+        }

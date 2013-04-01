@@ -1,0 +1,75 @@
+﻿body {
+    background-color: #000;
+    margin: 8px;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Rum Raisin', sans-serif;
+    font-size: 45px;
+    color: #dc0000;
+}
+
+    h1::before {
+        content: '(';
+    }
+
+    h1::after {
+        content: ')';
+    }
+
+h3 {
+    font-family: 'Share Tech Mono', sans-serif;
+    color: #808080;
+}
+
+p {
+    color: #484848;
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 40px;
+    width: 215px;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+    section a {
+        font-family: 'PT Mono', sans-serif;
+        color: #fff;
+        font-size: 20px;
+    }
+
+        section a:link {
+            text-decoration: none;
+        }
+
+        section a:visited {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section a:hover {
+            background-color: #ffd800;
+            color: #000;
+        }
+
+            section a:hover::after {
+                content: '>>';
+            }
+
+        section a:focus {
+            background-color: #ffd800;
+            color: #000;
+        }
+
+            section a:focus::after {
+                content: '>>';
+            }
+
+        section a:active {
+            background-color: #000;
+            color: #ffd800;
+        }

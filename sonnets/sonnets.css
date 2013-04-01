@@ -1,0 +1,85 @@
+﻿html {
+    height: 100%;
+}
+
+header {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 200%;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+
+
+ul {
+    list-style-type: none;
+    background-color: #fff;
+}
+
+.contents, .hide {
+    display: none;
+}
+
+nav {
+    font-family: 'Sorts Mill Goudy', serif;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    font-size: 150%;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 2px solid #bdbdbd;
+}
+
+    nav p {
+        height: 20%;
+        left: 0;
+        padding: 1%;
+        margin: 0;
+        cursor: default;
+        background-color: #000;
+        color: #fff;
+        font-size: 75%;
+        clear: both;
+    }
+
+    nav ul {
+        float: left;
+        width: 9.5%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        border-left: 1px solid #bdbdbd;
+    }
+
+    nav li {
+        font-size: 95%;
+    }
+
+        nav li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+            nav li a:hover {
+                color: #808080;
+            }
+
+.main {
+    font-family: 'Sorts Mill Goudy', serif;   
+    font-size: 120%;
+    height: 70%;
+    overflow: hidden;
+    padding-bottom: 75px;
+}
+
+    .main div {
+        border-bottom: 2px dashed #808080;
+        margin: 5px;
+        height: 90%;
+        text-align: center;
+    }

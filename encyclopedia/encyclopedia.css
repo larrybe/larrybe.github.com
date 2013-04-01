@@ -1,0 +1,300 @@
+﻿@media screen and (min-width: 801px) {
+    body {
+        background-image: url(images/wheel-69685_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        width: 100px;
+        background-color: #000;
+    }
+
+    .content {
+        min-width: 220px;
+        max-width: 400px;
+    }
+
+    .main {
+        background-color: #000;
+    }
+
+    img {
+        position: relative;
+        top: 4px;
+        max-width: 200px;
+        min-width: 100px;
+    }
+
+    select {
+        position: relative;
+        bottom: 2px;
+        right: 2px;
+        font-size: 1.2em;
+        background-color: #000;
+        color: #fff;
+        border: none;
+    }
+
+    #submit {
+        position: relative;
+        top: 7px;
+        left: 5px;
+    }
+
+    #search {
+        font-size: 2em;
+        margin: 1%;
+        max-width: 330px;
+        min-width: 200px;
+        background-color: #000;
+        color: #fff;
+        border-bottom: 4px solid #fff;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+
+        h2 {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .featured a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .featured a div {
+                background-color: rgba(0, 0, 0, 0.40);
+                padding: 2px;
+            }
+
+            .featured a:hover div {
+                background-color: rgba(22, 155, 232, 0.42);
+                color: #000;
+            }
+    .narrow, .port {
+        display: none;
+    }
+
+    .note {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+        left: 0;
+        float: right;
+    }
+
+        .note > p {
+            display: inline;
+            background-color: #fff;
+            color: #000;
+            font-size: 13px;
+        }
+
+            .note > p:hover {
+                font-size: 20px;
+            }
+}
+
+
+@media screen and (min-width: 100px) and (max-width: 800px) {
+    body {
+        background-image: url(images/sunrise-80103_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        width: 75px;
+        background-color: #000;
+    }
+
+    .content {
+        min-width: 220px;
+        max-width: 267px;
+    }
+
+    .main {
+        background-color: #000;
+    }
+
+    img {
+        position: relative;
+        top: 4px;
+        max-width: 200px;
+        min-width: 80px;
+    }
+
+    select {
+        position: relative;
+        bottom: 2px;
+        right: 2px;
+        font-size: 1em;
+        background-color: #000;
+        color: #fff;
+        border: none;
+    }
+
+    #submit {
+        position: relative;
+        top: 7px;
+        left: 5px;
+    }
+
+    #search {
+        font-size: 1.3em;
+        margin: 1%;
+        max-width: 330px;
+        min-width: 200px;
+        background-color: #000;
+        color: #fff;
+        border-bottom: 4px solid #fff;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+
+        h2 {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .featured a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .featured a div {
+                background-color: rgba(0, 0, 0, 0.40);
+                padding: 2px;
+            }
+
+            .featured a:hover div {
+                background-color: rgba(22, 155, 232, 0.42);
+                color: #000;
+            }
+
+    .peng, .port {
+        display: none;
+    }
+
+    .note {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: -70px;
+        left: 0;
+        float: right;
+    }
+
+        .note > p {
+            display: inline;
+            background-color: #fff;
+            color: #000;
+            font-size: 13px;
+        }
+}
+
+
+
+@media (max-device-width: 800px) and (orientation: portrait) {
+    body {
+        background-image: url(images/grand-canyon-77693_640.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        width: 100px;
+        background-color: #000;
+    }
+
+    .content {
+        min-width: 220px;
+        max-width: 400px;
+    }
+
+    .main {
+        background-color: #000;
+    }
+
+    img {
+        position: relative;
+        top: 4px;
+        max-width: 200px;
+        min-width: 100px;
+    }
+
+    select {
+        position: relative;
+        bottom: 2px;
+        right: 2px;
+        font-size: 1.2em;
+        background-color: #000;
+        color: #fff;
+        border: none;
+    }
+
+    #submit {
+        position: relative;
+        top: 7px;
+        left: 5px;
+    }
+
+    #search {
+        font-size: 2em;
+        margin: 1%;
+        max-width: 330px;
+        min-width: 200px;
+        background-color: #000;
+        color: #fff;
+        border-bottom: 4px solid #fff;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+
+        h2 {
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .featured a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .featured a div {
+                background-color: rgba(0, 0, 0, 0.40);
+                padding: 2px;
+            }
+
+            .featured a:hover div {
+                background-color: rgba(22, 155, 232, 0.42);
+                color: #000;
+            }
+
+    .peng, .narrow {
+        display: none;
+    }
+
+    .note {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+        left: 0;
+        float: right;
+    }
+
+        .note > p {
+            display: inline;
+            background-color: #fff;
+            color: #000;
+            font-size: 13px;
+        }
+}
+
