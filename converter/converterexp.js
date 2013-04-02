@@ -1,5 +1,6 @@
 ﻿$('document').ready(function () {
-    $('a').click(function () {
+    $('a').click(function (evt) {
+        evt.preventDefault();
         var box = $(this).attr('id');
         //console.log('#'+box+'Box');
         $('#' + box + 'Box').slideDown(200);
