@@ -2,14 +2,12 @@
     $('a').click(function (evt) {
         evt.preventDefault();
         var box = $(this).attr('id');
-        //console.log('#'+box+'Box');
         $('#' + box + 'Box').slideDown(200);
         $('#' + box + 'Close').click(function () {
             $('#' + box + 'Box').slideUp(100);
         })
-    })//end click
+    })
 
-    //----------------------------------------THIS CODE IS GOOD ----------------------------------------------------------
 
     $('input[name="enterTemp"], select[name="tempUnits"]').on('keyup change', function () {
         var tempInput = $('input[name="enterTemp"]').val();
@@ -32,7 +30,7 @@
                     case 'celsius':
                         tempCalc(0, 1, 1, 0);
                         break;
-                }//end celsius switch
+                }
                 break;
             case 'fahrenheit':
                 switch (tempSelect1) {
@@ -45,7 +43,7 @@
                     case 'fahrenheit':
                         tempCalc(0, 1, 1, 0);
                         break;
-                }// end fahrenheit switch
+                }
                 break;
             case 'kelvin':
                 switch (tempSelect1) {
@@ -58,11 +56,9 @@
                     case 'kelvin':
                         tempCalc(0, 1, 1, 0);
                         break;
-                }//end kelvin switch
-        }//end tempSelect switch
-    })//end keyup
-
-    //----------------------------------------------This code is good-------------------------------------------------
+                }
+        }
+    })
 
     $('input[name="enterTime"], select[name="timeUnits"]').on('keyup change', function () {
         var timeInput = $('input[name="enterTime"]').val();
@@ -101,7 +97,7 @@
                     case 'years':
                         timeCalcd('~', 60, 60, 24, 365, 1, 1);
                         break;
-                }//end seconds switch
+                }
                 break;
             case 'milliseconds':
                 switch (timeSelect1) {
@@ -129,7 +125,7 @@
                     case 'years':
                         timeCalcd('~', 1000, 60, 60, 24, 365, 1);
                         break;
-                }// end milliseconds switch
+                }
                 break;
             case 'minutes':
                 switch (timeSelect1) {
@@ -157,7 +153,7 @@
                     case 'years':
                         timeCalcd('~', 60, 24, 365, 1, 1, 1);
                         break;
-                }//end minutes switch
+                }
                 break;
             case 'hours':
                 switch (timeSelect1) {
@@ -185,7 +181,7 @@
                     case 'years':
                         timeCalcd('~', 24, 365, 1, 1, 1, 1);
                         break;
-                }//end hours switch
+                }
                 break
             case 'days':
                 switch (timeSelect1) {
@@ -213,7 +209,7 @@
                     case 'years':
                         timeCalcd('~', 365, 1, 1, 1, 1, 1);
                         break;
-                }//end days switch
+                }
                 break;
             case 'weeks':
                 switch (timeSelect1) {
@@ -241,7 +237,7 @@
                     case 'years':
                         timeCalcd('~', 52, 1, 1, 1, 1, 1);
                         break;
-                }//end weeks switch
+                }
                 break;
             case 'months':
                 switch (timeSelect1) {
@@ -269,7 +265,7 @@
                     case 'years':
                         timeCalcd('', 12, 1, 1, 1, 1, 1);
                         break;
-                }//end months switch
+                }
                 break;
             case 'years':
                 switch (timeSelect1) {
@@ -297,10 +293,9 @@
                     case 'years':
                         timeCalcm('', 1, 1, 1, 1, 1, 1);
                         break;
-                }//end years switch
-        }//end timeSelect switch
-    })//end keyup
-        //-----------------------remember to add the rest of the .toPrecision otherwise This code is good------------------------------------
+                }
+        }
+    })
 
     $('input[name="enterLength"], select[name="lengthUnits"]').on('keyup change', function () {
         var lengthInput = $('input[name="enterLength"]').val();
@@ -336,7 +331,7 @@
                     case 'inch':
                         lengCalc((+39370.0787));
                         break;
-                }//end kilometre switch
+                }
                 break;
             case 'metre':
                 switch (lengthSelect1) {
@@ -364,7 +359,7 @@
                     case 'inch':
                         lengCalc((+39.3700787));
                         break;
-                }//end metre select
+                }
                 break;
             case 'centimetre':
                 switch (lengthSelect1) {
@@ -392,7 +387,7 @@
                     case 'inch':
                         lengCalc((+0.393701));
                         break;
-                }//end cm select
+                }
                 break;
             case 'millimetre':
                 switch (lengthSelect1) {
@@ -420,7 +415,7 @@
                     case 'inch':
                         lengCalc((+0.0393700787));
                         break;
-                }//end mm select
+                }
                 break;
             case 'mile':
                 switch (lengthSelect1) {
@@ -448,7 +443,7 @@
                     case 'inch':
                         lengCalc(63360);
                         break;
-                }//end m select
+                }
                 break;
             case 'yard':
                 switch (lengthSelect1) {
@@ -476,7 +471,7 @@
                     case 'inch':
                         lengCalc(36);
                         break;
-                }//end yd select
+                }
                 break;
             case 'feet':
                 switch (lengthSelect1) {
@@ -504,7 +499,7 @@
                     case 'inch':
                         lengCalc(12);
                         break;
-                }//end ft select
+                }
                 break;
             case 'inch':
                 switch (lengthSelect1) {
@@ -532,12 +527,10 @@
                     case 'inch':
                         lengCalc(1);
                         break;
-                }//end in select
+                }
                 break;
-        }//end lengthselect switch
-    })//end keyup
-   
-    //-------------------------------------------------this code is good---------------------------------------->
+        }
+    })
 
     $('input[name="enterSpeed"], select[name="speedUnits"]').on('keyup change', function () {
         var speedInput = $('input[name="enterSpeed"]').val();
@@ -642,8 +635,8 @@
                         break;
                 }
                 break;
-        }//end speedselect switch
-    })//end keyup
+        }
+    })
 
     $('input[name="enterArea"], select[name="areaUnits"]').on('keyup change', function () {
         var areaInput = $('input[name="enterArea"]').val();
@@ -878,9 +871,7 @@
                 }
                 break;
         }
-    })//end keyup
-
-    //----------------------------------------check to see if code is good----------------------------------------------
+    })
 
     $('input[name="enterFuel"], select[name="fuelUnits"]').on('keyup change', function () {
         var fuelInput = $('input[name="enterFuel"]').val();
@@ -959,9 +950,7 @@
                 }
                 break;
         }
-    })//end keyup
-
-    //--------------------------------------This code is good----------------------------------------------------------
+    })
 
     $('input[name="enterWeight"], select[name="weightUnits"]').on('keyup change', function () {
         var weightInput = $('input[name="enterWeight"]').val();
@@ -1148,7 +1137,7 @@
                 }
                 break;
         }
-    })//end keyup
+    })
 
     $('input[name="enterByte"], select[name="byteUnits"]').on('keyup change', function () {
         var byteInput = $('input[name="enterByte"]').val();
@@ -1190,7 +1179,7 @@
                     case 'terabyte':
                         byteCalc((1.13686249961) * Math.pow(10, -13));
                         break;
-                }//end bit switch
+                }
                 break;
             case 'byte':
                 switch (byteSelect1) {
@@ -1224,7 +1213,7 @@
                     case 'terabyte':
                         byteCalc((9.0949) * Math.pow(10, -13));
                         break;
-                }//end byte switch
+                }
                 break;
             case 'kilobit':
                 switch (byteSelect1) {
@@ -1501,4 +1490,4 @@
         }
     })
 
-})//end ready
+})
