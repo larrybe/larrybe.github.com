@@ -1,11 +1,12 @@
-﻿$('document').ready(function () {
-    $('a').click(function (evt) {
+$('document').ready(function () {
+    $('.cat').click(function (evt) {
         evt.preventDefault();
         var box = $(this).attr('id');
-        $('#' + box + 'Box').slideDown(200);
-        $('#' + box + 'Close').click(function () {
-            $('#' + box + 'Box').slideUp(100);
-        })
+        $('#' + box + 'Box').toggle('800');
+    })
+    $(document).keydown(function (e) {
+        if (e.keyCode === 27)
+            $('.unitBox').hide('800');
     })
 
 
