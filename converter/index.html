@@ -16,21 +16,8 @@
     <header>
         <h1>Unit Converter</h1>
     </header>
-    <ul>
-        <li>
-            <p class="small">Please Choose a Category:</p>
-        </li>
-        <li><a href='#' id="temp">Temperature</a></li>
-        <li><a href='#' id="time">Time</a></li>
-        <li><a href='#' id="length">Length</a></li>
-        <li><a href='#' id="speed">Speed</a></li>
-        <li><a href='#' id="area">Area</a></li>
-        <li><a href='#' id="fuel">Fuel</a></li>       
-        <li><a href='#' id="weight">Weight</a></li>
-        <li><a href='#' id="byte">Bits/Bytes</a></li>
-    </ul>
+    <div class="cat" id="temp"><a href='#'>Temperature</a><p>&deg;Celsius, &deg;Fahrenheit, Kelvin</p></div>
     <div class='unitBox tempBox' id="tempBox">
-        <h3 class="hdng">Temperature</h3>
         <div id="tempLeft" class="layer2">
             <div>
                 <input type="number" name="enterTemp" id="enterTemp" class="enter" placeholder="Enter # to be converted" />
@@ -46,21 +33,21 @@
                 <p class="result" id="tempResult"></p>
                 <select class="short" name="tempUnits" id="tempUnits1">
                     <option value="celsius">&deg;Celsius</option>
-                    <option value="fahrenheit" selected>&deg;Fahrenheit</option>                    
+                    <option value="fahrenheit" selected>&deg;Fahrenheit</option>
                     <option value="kelvin">Kelvin</option>
                 </select>
             </div>
         </div>
-        <div class="close" id="tempClose">Close</div>
     </div>
+
+    <div class="cat" id="time"><a href='#'>Time</a><p>milliseconds, seconds, minuites, hours, days, weeks, months, years</p></div>
     <div class="unitBox timeBox" id="timeBox">
-        <h3 class="hdng">Time</h3>
         <div id="timeLeft" class="layer2">
             <div>
                 <input type="number" class="enter" name="enterTime" placeholder="Enter # to be converted" />
                 <select class="short" name="timeUnits" id="timeUnits">
                     <option value="milliseconds">Milliseconds</option>
-                    <option value="seconds" selected>Seconds</option>                    
+                    <option value="seconds" selected>Seconds</option>
                     <option value="minutes">Minutes</option>
                     <option value="hours">Hours</option>
                     <option value="days">Days</option>
@@ -75,7 +62,7 @@
                 <p class="result" id="timeResult"></p>
                 <select class="short" name="timeUnits" id="timeUnits1">
                     <option value="milliseconds" selected>Milliseconds</option>
-                    <option value="seconds">Seconds</option>                                        
+                    <option value="seconds">Seconds</option>
                     <option value="minutes">Minutes</option>
                     <option value="hours">Hours</option>
                     <option value="days">Days</option>
@@ -85,11 +72,10 @@
                 </select>
             </div>
         </div>
-        <div id="timeClose" class="close">Close</div>
     </div>
 
+    <div class="cat" id="length"><a href='#'>Length</a><p>kilometres,metres, centimetres, millimetres, miles, yards, feet, inches</p></div>
     <div class="unitBox lengthBox" id="lengthBox">
-        <h3 class="hdng">Length</h3>
         <div class="layer2">
             <div>
                 <input type="number" class="enter" name="enterLength" placeholder="Enter # to be converted" />
@@ -108,7 +94,7 @@
         <div class="layer3">
             <div class="output">
                 <p class="result" id="lengthResult"></p>
-                <select class="short" name="lengthUnits" id="lengthUnits1">                    
+                <select class="short" name="lengthUnits" id="lengthUnits1">
                     <option value="kilometre">Kilometres</option>
                     <option value="metre" selected>Metres</option>
                     <option value="centimetre">Centimetres</option>
@@ -120,11 +106,10 @@
                 </select>
             </div>
         </div>
-        <div id="lengthClose" class="close">Close</div>
     </div>
 
+    <div class="cat" id="speed"><a href='#'>Speed</a><p>miles/hour, kilometres/hour, feet/sec, meters/sec, knot</p></div>
     <div class="unitBox speedBox" id="speedBox">
-        <h3 class="hdng">Speed</h3>
         <div class="layer2">
             <div>
                 <input type="number" class="enter" name="enterSpeed" placeholder="Enter # to be converted" />
@@ -140,7 +125,7 @@
         <div class="layer3">
             <div class="output">
                 <p class="result" id="speedResult"></p>
-                <select class="long" name="speedUnits" id="speedUnits1">                    
+                <select class="long" name="speedUnits" id="speedUnits1">
                     <option value="mph">Miles/Hour</option>
                     <option value="kmph" selected>Kilometres/Hour</option>
                     <option value="fps">Feet/Sec</option>
@@ -149,11 +134,10 @@
                 </select>
             </div>
         </div>
-        <div id="speedClose" class="close">Close</div>
     </div>
 
+    <div class="cat" id="area"><a href='#'>Area</a><p>kilometres&#178;, Hectares, metres&#178;, miles&#178;, acres, yards&#178;, feet&#178;, inches&#178;</p></div>
     <div class="unitBox areaBox" id="areaBox">
-        <h3 class="hdng">Area</h3>
         <div class="layer2">
             <div>
                 <input type="number" class="enter" name="enterArea" placeholder="Enter # to be converted" />
@@ -173,8 +157,8 @@
             <div class="output">
                 <p class="result" id="areaResult"></p>
                 <select class="short" name="areaUnits" id="areaUnits1">
-                    <option value="sqkm">Kilometres&#178;</option> 
-                    <option value="hectare" selected>Hectares</option>                                       
+                    <option value="sqkm">Kilometres&#178;</option>
+                    <option value="hectare" selected>Hectares</option>
                     <option value="sqmetre">Metres&#178;</option>
                     <option value="sqmile">Miles&#178;</option>
                     <option value="acre">Acres</option>
@@ -184,11 +168,10 @@
                 </select>
             </div>
         </div>
-        <div id="areaClose" class="close">Close</div>
     </div>
-
+    
+    <div class="cat" id="fuel"><a href='#'>Fuel</a><p>miles/gal(us), miles/gal(imp), kilometres/liter, liter/1000km</p></div>
     <div class="unitBox fuelBox" id="fuelBox">
-        <h3 class="hdng">Fuel</h3>
         <div class="layer2">
             <div>
                 <input type="number" class="enter" name="enterFuel" placeholder="Enter # to be converted" />
@@ -203,19 +186,18 @@
         <div class="layer3">
             <div class="output">
                 <p class="result" id="fuelResult"></p>
-                <select class="long" name="fuelUnits" id="fuelUnits1">                 
+                <select class="long" name="fuelUnits" id="fuelUnits1">
                     <option value="mpg">Miles/Gal(US)</option>
-                    <option value="mpgimp">Miles/Gal(imp)</option> 
-                    <option value="kmpl" selected>Kilometres/Liter</option>                   
+                    <option value="mpgimp">Miles/Gal(imp)</option>
+                    <option value="kmpl" selected>Kilometres/Liter</option>
                     <option value="lp1k">Liter/1000km</option>
                 </select>
             </div>
         </div>
-        <div id="fuelClose" class="close">Close</div>
     </div>
 
+    <div class="cat" id="weight"><a href='#'>Weight</a><p>milligrams, grams, kilograms, pounds, ounces, stone, carats</p></div>
     <div class="unitBox weightBox" id="weightBox">
-        <h3 class="hdng">Weight</h3>
         <div class="layer2">
             <div>
                 <input type="number" class="enter" name="enterWeight" placeholder="Enter # to be converted" />
@@ -237,18 +219,17 @@
                     <option value="milligrams">milligrams</option>
                     <option value="grams">Grams</option>
                     <option value="kilograms">Kilograms</option>
-                    <option value="pounds" selected>Pounds</option>                                       
+                    <option value="pounds" selected>Pounds</option>
                     <option value="ounces">Ounces</option>
-                    <option value="stones">Stones</option>                                      
+                    <option value="stones">Stones</option>
                     <option value="carats">Carats</option>
                 </select>
             </div>
         </div>
-        <div id="weightClose" class="close">Close</div>
     </div>
 
+    <div class="cat" id="byte"><a href='#'>Bits/Bytes</a><p>bits, bytes, kilobits, kilobytes, megabits, megabytes, gigabits, gigabytes, terabits, terabytes</p></div>
     <div class="unitBox byteBox" id="byteBox">
-        <h3 class="hdng">Bit/Bytes</h3>
         <div class="layer2">
             <div>
                 <input type="number" class="enter" name="enterByte" placeholder="Enter # to be converted" />
@@ -283,9 +264,7 @@
                 </select>
             </div>
         </div>
-        <div id="byteClose" class="close">Close</div>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="converterexp.js"></script>
+    <script src="converter.js"></script>
 </body>
 </html>
