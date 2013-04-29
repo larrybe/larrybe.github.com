@@ -1,28 +1,27 @@
-﻿body {
-    background-image: url(bg.png);
+body {
+    background-image: url(graphy.png); /*background pattern from http://subtlepatterns.com/ */
 }
 
 header {
     position: relative;
     text-align: center;
-    line-height: 2em;
+    line-height: 0.5em;
     width: 100%;
     top: -10px;
-    left:0;
+    left: 0;
+    border-bottom: 1px solid #000;
 }
 
 h1 {
     cursor: default;
     font-family: 'Iceland', cursive;
-    font-size: 4em;
+    font-size: 2.5em;
     color: #808080;
 }
 
-ul {
+.cat {
     position: relative;
     list-style-type: none;
-    border-top: 2px solid #713535;
-    border-bottom: 2px solid #713535;
     font-family: 'Port Lligat Slab', serif;
     text-align: center;
     padding: 0;
@@ -38,30 +37,46 @@ ul {
     font-size: .3em;
 }
 
-li {
-    font-size: 3.3em;
+.cat {
+    font-size: 2em;
+    position: relative;
+    width: 100%;
+    left: 0;
+    cursor: pointer;
+    transition: background-color linear .35s;
 }
 
-    li a {
-        text-decoration: none;
-        color: #000;
+    .cat p {
+        font-size: 12px;
+        position: relative;
+        top: -10px;
+        line-height: 12px;
     }
 
-    li a:hover, li a:focus {
-        color: #713535;
+    .cat a {
+        text-decoration: none;
+        color: #1dbd9f;
+        transition: color linear .35s;
     }
+
+    .cat:hover {
+        background-color: #c75858;
+    }
+
+        .cat:hover > a, .cat:focus > a {
+            color: #09d4f1;
+        }
 
 .unitBox {
-    background-color: #fff;
-    font-size: 1.7em;
-    position: absolute;
+    background-color: rgba(0, 0, 0, 0.40);
+    font-size: 20px;
     top: 0;
     width: 100%;
     left: 0;
     display: none;
 }
 
-.unitBox, input, select{
+.unitBox, input, select {
     font-family: 'Anaheim', sans-serif;
     color: #000;
 }
@@ -74,6 +89,7 @@ li {
     position: relative;
     top: 1.5em;
 }
+
 .layer3 > div {
     position: relative;
     top: 3.5em;
@@ -86,9 +102,9 @@ select {
     margin: auto;
 }
 
-    .short {
-        width: 180px;
-    }
+.short {
+    width: 180px;
+}
 
 .long {
     width: 220px;
@@ -109,15 +125,18 @@ input {
     text-align: center;
 }
 
-:-moz-placeholder  {
+:-moz-placeholder {
     color: #e8e8e8;
 }
+
 ::-moz-placeholder {
     color: #e8e8e8;
 }
+
 :-ms-input-placeholder {
     color: #e8e8e8;
 }
+
 ::-webkit-input-placeholder {
     color: #e8e8e8;
 }
@@ -128,24 +147,11 @@ input {
     border-style: solid;
     width: 10em;
     text-align: center;
-}
-
-
-
-.hdng {
-    position: relative;
-    top: 0;
-    text-align: center;
-    font-size: 2em;
-    height: 1.5em;
-    padding: 0;
-    margin: 0;
-    border-bottom: 1px solid #713535;
-    cursor: default;
+    background-color: #fff;
 }
 
 .layer2 {
-    position: relative;   
+    position: relative;
     top: 1em;
     height: 7.5em;
     width: 100%;
