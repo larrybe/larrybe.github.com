@@ -1,0 +1,441 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--[if lt IE 9]>
+     <script src="../html5shiv.js"></script>
+<![endif]-->
+    <meta charset="utf-8" />
+    <title>Cultural Events</title>
+    <meta name="description" content="Festivals happening in the month of April around the world." />
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+    <link href="events.css" rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="festlist.js"></script>
+    <script src="events.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Cultural Events</h1>
+    </header>
+    <section class="overview">
+        <iframe width="425" height="350" src="#"></iframe>
+        <div id="details">
+            <p>
+                Name: <span id="name" class="info"></span>
+                <br />
+                Date: <span id="date" class="info"></span>
+                <br />
+                Location: <span id="location" class="info"></span>
+                <br />
+                Description: <span id="desc" class="info"></span><a href="#" id="wikiLink" target="_blank">[wikipedia]</a>
+                <a href="#" id="photoCredit" target="_blank">[Image Source]</a>
+                <a href="http://www.openstreetmap.org/" target="_blank">[OpenStreetMap]</a>
+            </p>
+            <a id="link" href="#" target="_blank">More Information</a>
+            <button class="close">close <span>X</span></button>
+        </div>
+    </section>
+    <section class="events">
+        <a href="http://www.icefestivalharbin.com/" id="0" target="_blank" class="large">
+            <img src="image/harbin_ice_fest.jpg" alt="Picture of the Harbin Ice Festival" />
+            <p>
+                <span class=what>Harbin Ice Sculpture Festival</span><br />
+                <span class="where">China</span><br />
+                <span class="when">January</span>
+            </p>
+        </a>
+        <a href="http://www.mardigrasneworleans.com/" id="1" target="_blank">
+            <img src="image/mardi_gras.jpg" alt="Picture of Mardi Gras" />
+            <p>
+                <span class=what>Mardi Gras</span><br />
+                <span class="where">LA, United States</span><br />
+                <span class="when">March</span>
+            </p>
+        </a>
+        <a href="http://www.bigdayout.com/" id="2" target="_blank">
+            <img src="image/big_day_out.jpg" alt="Picture of Big Day Out"/>
+        <p>
+                <span class=what>Big Day Out </span><br />
+                <span class="where">Australia</span><br />
+                <span class="when">January</span>
+            </p>
+        </a>
+        <a href="http://www.sundance.org/festival/" id="3" target="_blank">
+            <img src="image/sundance_film_fest.jpg" alt="Picture of the Sundance Film Festival"/>
+            <p>
+                <span class=what>Sundance</span><br />
+                <span class="where">UT, United States</span><br />
+                <span class="when">January</span>
+            </p>
+        </a>
+        <a href="http://www.travelkawasaki.com/kanamara/" id="4" target="_blank" class="small" >
+            <img src="image/kanamara_matsuri.jpg" alt="Picture of Kanamara Mastsuri"/>
+            <p>
+                <span class=what>Kanamara Matsuri</span><br />
+                <span class="where">Japan</span><br />
+                <span class="when">April</span>
+            </p>
+        </a>
+        <a href="http://www.chinesenewyears.info/chinese-new-year-calendar.php" id="5" target="_blank">
+            <img src="image/chinese_new_year.jpg" alt="Picture of the Chinese New Year"/>
+            <p>
+                <span class=what>Chinese New Year</span><br />
+                <span class="where">China</span><br />
+                <span class="when">January</span>
+            </p>
+        </a>
+        <a href="http://www.burningman.com/" id="6" target="_blank" class="large">
+            <img src="image/burning_man.jpg" alt="Picture of Burning Man"/>
+            <p>
+                <span class=what>Burning Man</span><br />
+                <span class="where">NV, United States</span><br />
+                <span class="when">August</span>
+            </p>
+        </a>
+        <a href="http://www.ilpalio.org/" id="7" target="_blank">
+            <img src="image/palio_di_siena.jpg" alt="Picture of Palio Di Siena"/>
+            <p>
+                <span class=what>Palio Di Siena</span><br />
+                <span class="where">Italy</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://www.tomatina.es/" id="8" target="_blank">
+            <img src="image/La_Tomatina.jpg" alt="A photo of Tomatina"/>
+            <p>
+                <span class=what>La Tomatina</span><br />
+                <span class="where">Spain</span><br />
+                <span class="when">August</span>
+            </p>
+        </a>
+        <a href="http://www.ultramusicfestival.com/home" id="9" target="_blank" class="small">            
+            <img src="image/untra_music_fest.jpg" alt="Picture of the Ultra Music Festival"/>
+            <p>
+                <span class=what>Ultra Music Fest</span><br />
+                <span class="where">FL, United States</span><br />
+                <span class="when">March</span>
+            </p>
+        </a>
+        <a href="http://www.lasfallas.net/" id="10" target="_blank" class="small">
+            <img src="image/las_fallas.jpg" alt="Picture of Las Fallas"/>
+            <p>
+                <span class=what>Las Fallas</span><br />
+                <span class="where">Spain</span><br />
+                <span class="when">March</span>
+            </p>
+        </a>
+        <a href="http://www.carnevale.venezia.it/index.php" id="11" target="_blank">
+            <img src="image/carnival_of_venice.jpg" alt="Picture of the Carnival of Venice"/>
+            <p>
+                <span class=what>Carnival of Venice</span><br />
+                <span class="where">Italy</span><br />
+                <span class="when">February</span>
+            </p>
+        </a>
+        <a href="http://www.holifestival.org/" id="12" target="_blank" class="large">
+            <img src="image/Holi_Pic.jpg" alt="Picture of Holi"/>
+            <p>
+                <span class=what>Holi</span><br />
+                <span class="where">India/Nepal</span><br />
+                <span class="when">March</span>
+            </p>
+        </a>
+        <a href="http://frozendeadguydays.org/" id="13" target="_blank">
+            <img src="image/frozen_dead_guy_days.jpg" alt="Picture of Frozen Dad Guy Days"/>
+            <p>
+                <span class=what>Frozen Dead Guy</span><br />
+                <span class="where">CO, United States</span><br />
+                <span class="when">March</span>
+            </p>
+        </a>
+        <a href="http://www.canadascapital.gc.ca/celebrate/winterlude" id="14" target="_blank">
+            <img src="image/winterlude.jpg" alt="Picture of Winterlude"/>
+            <p>
+                <span class=what>Winterlude</span><br />
+                <span class="where">ON/QC Canada</span><br />
+                <span class="when">January</span>
+            </p>
+        </a>
+        <a href="http://www.2camels.com/ivrea-carnival.php" id="15" target="_blank" class="small">
+            <img src="image/Battle_of_Oranges.jpg" alt="Picture of the Battle of Oranges"/>
+            <p>
+                <span class=what>Battle of the Oranges</span><br />
+                <span class="where">Italy</span><br />
+                <span class="when">February</span>
+            </p>
+        </a>
+        <a href="http://www.rio-carnival.net/" id="16" target="_blank" class="large">
+            <img src="image/carnival.jpg" alt="Picture of the Carnival in Rio"/>
+            <p>
+                <span class=what>Carnival</span><br />
+                <span class="where">Brazil</span><br />
+                <span class="when">February</span>
+            </p>
+        </a>
+        <a href="http://www.coachella.com/" id="17" target="_blank">
+            <img src="image/coachella.jpg" alt="Picture of Le Butcherettes at the Coachella Music Festival"/>
+            <p>
+                <span class=what>Coachella</span><br />
+                <span class="where">CA, United States</span><br />
+                <span class="when">April</span>
+            </p>
+        </a>
+        <a href="http://songkran2013.com" target="_blank" id="18" >
+            <img src="image/songkran.jpg" alt="picture of Songkran Water Festival"/>
+            <p>
+                <span class=what>Songkran</span><br />
+                <span class="where">Thailand</span><br />
+                <span class="when">April</span>
+            </p>
+        </a>
+        <a href="http://creamfields.com.au/" target="_blank" id="19">
+            <img src="image/creamfields_aus.jpg" alt="Photo of David Guetta at Creafields Australia"/>
+            <p>
+                <span class=what>Creamfields</span><br />
+                <span class="where">Australia</span><br />
+                <span class="when">April</span>
+            </p>
+        </a>
+        <a href="http://www.stpatricksfestival.ie/" id="20" target="_blank" class="large">
+            <img src="image/St_Patricks_Day.JPG" alt="Picture of St. Patrick's Day Parade in Ireland"/>
+            <p>
+                <span class=what>St. Patrick's Day</span><br />
+                <span class="where">Ireland/Worldwide</span><br />
+                <span class="when">March</span>
+            </p>
+        </a>
+        <a href="http://www.koninginnedagamsterdam.nl/queensday.html" target="_blank" id="21">
+            <img src="image/Koninginnedag.jpg" alt="Picture of Koninginnedag"/>
+            <p>
+                <span class=what>Koningsdag</span><br />
+                <span class="where">The Netherlands</span><br />
+                <span class="when">April</span>
+            </p>
+        </a>
+        <a href="http://www.maailmakylassa.fi/english" target="_blank" id="22">
+            <img src="image/maailma_kylassa.jpg" alt="Picture of the World Village Festival"/>
+            <p>
+                <span class=what>Maailma Kylässä</span><br />
+                <span class="where">Finland</span><br />
+                <span class="when">May</span>
+            </p>
+        </a>
+        <a href="http://www.glastonburyfestivals.co.uk/" target="_blank" id="23">
+            <img src="image/glastonbury.jpg" alt="Picture of Glastonbury Festival"/>
+            <p>
+                <span class=what>Glastonbury</span><br />
+                <span class="where">England</span><br />
+                <span class="when">June</span>
+            </p>
+        </a>
+        <a href="http://www.travelallrussia.com/news/scarlet-sails-r89.html" target="_blank" id="24">
+            <img src="image/white_nights.jpg" alt="Picture of the Scarlet Sails which happens during the White Nights"/>
+            <p>
+                <span class=what>White Nights</span><br />
+                <span class="where">Russia</span><br />
+                <span class="when">June</span>
+            </p>
+        </a>
+        <a href="http://dragonboatbc.ca/home/" target="_blank" id="25" class="large">
+            <img src="image/dragon_boat_fest.jpg" alt="Picture of the Canadian International Dragon Boat Festival"/>
+            <p>
+                <span class=what>Rio Tinto Alcan Dragon Boat Festival</span><br />
+                <span class="where">BC, Canada</span><br />
+                <span class="when">June</span>
+            </p>
+        </a>
+        <a href="http://www.sanfermin.com/" target="_blank" id="26">
+            <img src="image/san_fermin.jpg" alt="Picture of San Fermin Festival"/>
+            <p>
+                <span class=what>San Fermin Festival</span><br />
+                <span class="where">Spain</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://panafestghana.org/" id="27" target="_blank" class="small">
+            <img src="image/panafest.jpg" alt="Picture for Panafest"/>
+            <p>
+                <span class=what>Panafest</span><br />
+                <span class="where">Ghana</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://www.festival-cannes.com/" target="_blank" id="28">
+            <img src="image/cannes.jpg" alt="Picture from the Cannes Film Festival"/>
+            <p>
+                <span class=what>Cannes Film Festival</span><br />
+                <span class="where">France</span><br />
+                <span class="when">May</span>
+            </p>
+        </a>
+        <a href="http://www.pflasterspektakel.at/2013/de/" target="_blank" id="29">
+            <img src="image/pflasterspektakel.jpg" alt="Picture of Pflasterspektakel"/>
+            <p>
+                <span class=what>Pflasterspektakel</span><br />
+                <span class="where">Austria</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://capitolhillblockparty.com/" target="_blank" id="30">
+            <img src="image/capitol_hill_party.jpg" alt="Picture of the Capitol Hill Block Party"/>
+            <p>
+                <span class=what>Capitol Hill</span><br />
+                <span class="where">WA, United States</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://www.landshuter-hochzeit.de/en/" target="_blank" id="31" class="large">
+            <img src="image/landshut_wedding.jpg" alt="Picture from the Landshut Wedding"/>
+            <p>
+                <span class=what>Landshut Wedding</span><br />
+                <span class="where">Germany</span><br />
+                <span class="when">June</span>
+            </p>
+        </a>
+        <a href="http://www.lollapalooza.com/" target="_blank" id="32">
+            <img src="image/lollapalooza.jpg" alt="Picture from Lollapalooza"/>
+            <p>
+                <span class=what>Lollapalooza</span><br />
+                <span class="where">Il, United States</span><br />
+                <span class="when">August</span>
+            </p>
+        </a>
+        <a href="https://www.edfringe.com/" target="_blank" id="33">
+            <img src="image/edinburgh_fringe.jpg" alt="Picture from the Edinburgh Festival Fringe"/>
+            <p>
+                <span class=what>The Fringe</span><br />
+                <span class="where">Scotland</span><br />
+                <span class="when">August</span>
+            </p>
+        </a>
+        <a href="http://www.ohrid.org.mk/eng/festival/festival.htm" target="_blank" id="34">
+            <img src="image/balkan_folklore_festival.jpg" alt="Picture of the Balkan Folklore Festival"/>
+            <p>
+                <span class=what>Balkan Folklore</span><br />
+                <span class="where">Macedonia</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://www.heritage-festival.com/" target="_blank" id="35">
+            <img src="image/heritage_festival_edmonton.jpg" alt="Picture of the Edmonton Heritage Festival"/>
+            <p>
+                <span class=what>Edmonton Heritage</span><br />
+                <span class="where">AB, Canada</span><br />
+                <span class="when">August</span>
+            </p>
+        </a>
+        <a href="http://www.jnto.go.jp/eng/attractions/event/traditionalevents/a69b_fes_obon.html" target="_blank" id="36" class="small">
+            <img src="image/obon.jpg" alt="Picture of the Obon Festival"/>
+            <p>
+                <span class=what>Obon</span><br />
+                <span class="where">Japan</span><br />
+                <span class="when">August</span>
+            </p>
+        </a>
+        <a href="http://www.bellinghamfestival.org/" target="_blank" id="37">
+            <img src="image/bellingham_festival.jpg" alt="Picture of Guthrie Family Legacy at Bellingham"/>
+            <p>
+                <span class=what>Bellingham Festival</span><br />
+                <span class="where">WA, United States</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://www.cityofchicago.org/city/en/depts/dca/supp_info/chicago_jazz_festival.html" target="_blank" id="38">
+            <img src="image/chicago_jazz.jpg" alt="Picture of David Boykin Expanse at the Chicago Jazz Festival"/>
+            <p>
+                <span class=what>Chicago Jazz Festival</span><br />
+                <span class="where">Il, United States</span><br />
+                <span class="when">August</span>
+            </p>
+        </a>
+        <a href="http://www.cambridgefolkfestival.co.uk/" target="_blank" id="39">
+            <img src="image/cambridge_folk.jpg" alt="Picture from the Cambridge Folk Festival"/>
+            <p>
+                <span class=what>Cambridge Folk</span><br />
+                <span class="where">England</span><br />
+                <span class="when">July</span>
+            </p>
+        </a>
+        <a href="http://www.balloonfiesta.com/" target="_blank" id="40">
+            <img src="image/albuquerque_balloon_fiesta.JPG" alt="Picture of the Albuquerque Balloon Fiesta"/>
+            <p>
+                <span class=what>Balloon Fiesta</span><br />
+                <span class="where">NM, United States</span><br />
+                <span class="when">October</span>
+            </p>
+        </a>
+        <a href="http://www.diwalifestival.org/" target="_blank" id="41">
+            <img src="image/diwali.jpg" alt="Picture of clay lamps used in Diwali"/>
+            <p>
+                <span class=what>Diwali</span><br />
+                <span class="where">India</span><br />
+                <span class="when">October</span>
+            </p>
+        </a>
+        <a href="http://www.oktoberfest.de/en/" target="_blank" id="42" class="large">
+            <img src="image/oktoberfest.jpg" alt="Picture of Oktoberfest"/>
+            <p>
+                <span class=what>Oktoberfest</span><br />
+                <span class="where">Germany</span><br />
+                <span class="when">October</span>
+            </p>
+        </a>
+        <a href="http://www.fantasyfest.com/" target="_blank" id="43">
+            <img src="image/fantasy_fest.jpg" alt="Picture of Fantasy Fest"/>
+            <p>
+                <span class=what>Fantasy Fest</span><br />
+                <span class="where">FL, United States</span><br />
+                <span class="when">October</span>
+            </p>
+        </a>
+        <a href="http://www.inside-mexico.com/featuredead.htm" target="_blank" id="44">
+            <img src="image/dia_de_muertos.jpg" alt="Picture od Dia De Muertos"/>
+            <p>
+                <span class=what>Día de Muertos</span><br />
+                <span class="where">Mexico</span><br />
+                <span class="when">November</span>
+            </p>
+        </a>
+        <a href="http://www.uphellyaa.org/" id="45" target="_blank" class="large">
+            <img src="image/up_helly_aa.jpg" alt="Picture of Up Helly Aa"/>
+            <p>
+                <span class=what>Up Helly Aa</span><br />
+                <span class="where">Scotland</span><br />
+                <span class="when">Winter</span>
+            </p>
+        </a>
+        <a href="http://www.macys.com/parade" target="_blank" id="46" class="large">
+            <img src="image/thanksgiving_day_parade.jpg" alt="Picture of Macy’s Thanksgiving Day Parade"/>
+            <p>
+                <span class=what>Macy’s Thanksgiving Day Parade</span><br />
+                <span class="where">NY, United States</span><br />
+                <span class="when">November</span>
+            </p>
+        </a>
+        <a href="http://www.christmasfestival.com/" target="_blank" id="47">
+            <img src="image/natchitoches_christmas_festival.jpg" alt="Picture of the Natchitoches Christmas Festival"/>
+            <p>
+                <span class=what>Natchitoches Xmas</span><br />
+                <span class="where">LA, United States</span><br />
+                <span class="when">December</span>
+            </p>
+        </a>
+        <a href="http://www.visitbrighton.com/whats-on/burning-the-clocks-p372371" target="_blank" id="48">
+            <img src="image/burning_the_clocks.jpg" alt="Picture of Burning the Clocks"/>
+            <p>
+                <span class=what>Burning the Clocks</span><br />
+                <span class="where">England</span><br />
+                <span class="when">December</span>
+            </p>
+        </a>
+        <a href="#" id="49">
+            <img src="image/snowfall_in_milan.JPG" alt="Picture of a snowfall"/>
+            <p>
+                <span class=what>Watching the Snow</span><br />
+                <span class="where">Anywhere It Snows</span><br />
+                <span class="when">Winter</span>
+            </p>
+        </a>
+    </section>
+</body>
+</html>

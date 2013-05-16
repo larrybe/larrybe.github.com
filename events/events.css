@@ -1,0 +1,200 @@
+﻿body {
+    font-family: 'Quattrocento', serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #f8f8f8
+}
+
+header {
+    position: relative;
+    background-image: url(image/background.png);/*Pattern by By titimontoya: http://www.brusheezy.com/patterns/42598-lines-2 */
+    width: 100%;
+    height: 120px;
+    top: 0px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 55px;
+    position: relative;
+    top:60px;
+    margin: 0;
+}
+
+.events {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: -1;
+}
+
+    .events img {
+        padding: 0;
+        width: 245px;
+        margin-left: -4px;
+        margin-top: -5px;
+        border: none;
+    }
+
+    .events a {
+        text-decoration: none;
+        float: left;
+        margin: 10px;
+        background-color: #fff;
+    }
+
+        .events a:hover {
+            box-shadow: -3px 2px 5px #888888;
+        }
+
+        .events a p {
+            margin-left: -4.3px;
+            background-color: #fff;
+            margin-top: -4px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+        }
+
+.large img {
+    width: 460px;
+}
+
+.what {
+    font-size: 25px;
+    color: #000;
+}
+
+.where {
+    font-size: 18px;
+    color: #808080;
+}
+
+.when {
+    font-size: 13px;
+    color: #c1c1c1;
+}
+
+.medium img {
+    width: 200px;
+}
+
+.medium a {
+    height: 300px;
+}
+
+.small img {
+    width: 200px;
+}
+
+.small a {
+    height: 250px;
+}
+
+.small .what {
+    font-size: 20px;
+}
+
+.small .where {
+    font-size: 15px;
+}
+
+.small .when {
+    font-size: 12px;
+}
+
+.overview {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+    .overview div {
+        height: 97%;
+        width: 80%;
+        margin: auto;
+    }
+
+        .overview div p {
+            color: #808080;
+            font-size: 21px;
+        }
+
+            .overview div p span {
+                color: #000;
+            }
+
+            .overview div p a {
+                color: #77a9bb;
+                border: none;
+                font-size: 15px;
+            }
+
+                .overview div p a:hover {
+                    border: none;
+                    color: #bb7777;
+                }
+
+        .overview div img {
+            width: 450px;
+        }
+
+        .overview div a {
+            border: 3px solid #e0e0e0;
+            padding: 5px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #e0e0e0;
+        }
+
+            .overview div a:hover {
+                color: #77a9bb;
+                border: 3px solid #77a9bb;
+            }
+
+    .overview iframe {
+        height: 100%;
+        width: 40%;
+        background-color: #c1c1c1;
+        float: left;
+    }
+
+@media screen and (max-device-width: 360px), (max-width: 600px) {
+    .overview iframe {
+        height: 40%;
+        width: 100%;
+        background-color: #c1c1c1;
+    }
+    .overview div p {
+        font-size: 18px;
+    }
+
+    .overview div a {
+        font-size: 21px;
+    }
+}
+
+.overview .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    background-color: #e0e0e0;
+    color: #808080;
+    text-transform: uppercase;
+    border: 0 none;
+}
+
+    .overview .close span {
+        color: #9c0000;
+    }
