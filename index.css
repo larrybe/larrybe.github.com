@@ -1,5 +1,6 @@
 body {
-    width: 99%;
+    width: 100%;
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -8,12 +9,13 @@ h1, h2, h3 {
 }
 
 h1 {
-        font-size: 75px;
+        font-size: 55px;
         margin-bottom: 0;
+        color: #94d7e0;
     }
 
 h2 {
-    color: #0094ff;
+    color: #94d7e0;
     font-size: 45px;
 }
 
@@ -25,7 +27,6 @@ h3 {
 
 p {
     font-family: 'Bitter', serif;
-    font-size: 22px; 
 }
 
 a {
@@ -46,17 +47,16 @@ a {
     }
 
 header {
-    background-color: #0094ff;
-    color: #fff;
     position: relative;
     left: 0px;
-    top: -50px;
+    top: -30px;
     width: 100%;
     margin: 0;
+    border-bottom: 1px solid #c1de6a;
 }
 
     header h1, header p {
-        text-align: right;
+        text-align: center;
         padding-right: 10px;
     }
 
@@ -67,13 +67,18 @@ header {
     }
 
 section {
+    position: relative;
+    top: -10px;
     clear: both;
     width: 100%;
+    
 }
 
     section div {
         clear: both;
         margin-bottom: 85px;
+        width: 90%;
+        margin: auto;
     }
 
         section div img {
@@ -81,3 +86,7 @@ section {
             width: 250px;
             margin-right: 20px;
         }
+
+.contact {
+    margin-top: 100px;
+}
