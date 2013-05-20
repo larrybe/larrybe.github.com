@@ -34,6 +34,10 @@
     color: #fff;
 }
 
+[type=button]:active {
+    border: 1px inset #28a5ee;
+}
+
 a {
     position: absolute;
     bottom: 0.5%;
