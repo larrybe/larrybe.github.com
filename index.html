@@ -21,41 +21,87 @@
 </script>
 </head>
 <body>
-    <header>
-        <h1>larrybe</h1>
-        <p>Front-end web developer specializing in HTML, CSS and JavaScript to make useable, beautiful websites.</p>
-    </header>
-    <section class="main work">
-        <h2>some work</h2>
-        <div><h3>Cultural Events</h3>
-            <img src="imgs/eventsimg.png" alt="Screenshot of the website for Cultural Events"/>
-            <p>This website features the basic overviews for some of the world's biggest cultural events.<br /></p>
-            <a href="events">Visit the website for Cultural Events</a>
-        </div>
-        <div><h3>Shakespeare's Sonnets</h3>
-            <img src="imgs/sonnetsimg.png" alt="Screenshot of the website for Shakespeare's Sonnets"/>
-            <p>I enjoyed reading Shakespeare's Sonnets so I decided to make a website for them.<br />I made this website to be as minimal as possible to allow the reader to focus solely on the text.</p>
-            <a href="sonnets">Visit the website for Shakespeare's Sonnets.</a>
-        </div>
-        <div>
-            <h3>Unit Converter</h3>
-            <img src="imgs/converterimg.png" alt="Screenshot for the online unit converter." />
-            <p>A website that converts units.<br /> This website is in beta and being improved on everyday.</p>
-            <a href="converter">Visit the online unit converter.</a>
-        </div>
-        <div>
-            <h3>Concept homepage for an encyclopedia</h3>
-            <img src="imgs/encycimg.png" alt="Screenshot for the web encyclopedia homepage concept."/>
-            <p>I created a homepage for an encyclopedia in case I decided to create a full encyclopedia, I would at least have the homepage done.</p>
-            <a href="encyclopedia">Visit the web encyclopedia homepage concept.</a>
-        </div>
-        <div>
-            <h3>A css experiment</h3>
-            <img src="imgs/MEimg.png" alt="Screenshot the CSS mouse selector experiment."/>
-            <p>I gave myself 20 minutes to discover a CSS trick. This is what I came up with.<br /> The background can be changed using the CSS :hover and :active selectors, and the jQuery click function. </p>
-            <a href="selector">Visit the CSS mouse selector experiment.</a>
-        </div>
-    </section>
+    <section class="container">
+        <header class="span1">
+            <h1>larrybe</h1>
+            <p>Front-end web developer specializing in HTML, CSS and JavaScript to make useable, beautiful websites.</p>
+        </header>
+        <section class="main work span1">
+            <h2>some work</h2>
+            <div>
+                <div class="span4">
+                    <h3>Cultural Events</h3>
+                    <p>
+                        This website features the basic overviews for some of the world's biggest cultural events.<br />
+                    </p>
+                </div>
+                <img src="imgs/eventsimg.png" alt="Screenshot of the website for Cultural Events" class="span3" />
+                <a href="events" class="span3">
+                    Visit the website for Cultural Events
+                </a>
+            </div>            
+            <div>
+                <div class="span4">
+                    <h3>Unit Converter</h3>
+                    <p>
+                        A website that converts units.<br />
+                        This website is in beta and being improved on everyday.
+                    </p>
+                </div>
+                <img src="imgs/converterimg.png" alt="Screenshot for the online unit converter." class="span3" />
+                <a href="converter" class="span3">
+                    Visit the online unit converter.
+                </a>
+            </div>
+            <div>
+                <div class="span4">
+                    <h3>Shakespeare's Sonnets</h3>
+                    <p>
+                        I enjoyed reading Shakespeare's Sonnets so I decided to make a website for them.<br />
+                        I made this website to be as minimal as possible to allow the reader to focus solely on the text.
+                    </p>
+                </div>
+                <img src="imgs/sonnetsimg.png" alt="Screenshot of the website for Shakespeare's Sonnets" class="span3" />
+                <a href="sonnets" class="span3">
+                    Visit the website for Shakespeare's Sonnets.
+                </a>
+            </div>
+            <div>
+                <div class="span4">
+                    <h3>Animate</h3>
+                    <p>
+                        I made this website to explore the difference between the CSS3 animation property and jQuery's animate funtion.
+                    </p>
+                </div>
+                <img src="imgs/animateimg.png" alt="Screenshot of the website for animate" class="span3" />
+                <a href="animate" class="span3">
+                    Visit the CSS/jQuery animate experiment website.
+                </a>
+            </div>
+            <div>
+                <div class="span4 encyc">
+                    <h3>Concept encyclopedia homepage</h3>
+                    <p>I created a homepage for an encyclopedia in case I decided to create a full one, I would at least have the homepage done.</p>
+                </div>
+                <img src="imgs/encycimg.png" alt="Screenshot for the web encyclopedia homepage concept." class="span3" />
+                <a href="encyclopedia" class="span3">
+                    Visit the web encyclopedia homepage concept.
+                </a>
+            </div>
+            <div>
+                <div class="span4">
+                    <h3>A css experiment</h3>
+                    <p>
+                        I gave myself 20 minutes to discover a CSS trick. This is what I came up with.<br />
+                        The background can be changed using the CSS :hover and :active selectors, and the jQuery click function.
+                    </p>
+                </div>
+                <img src="imgs/MEimg.png" alt="Screenshot the CSS mouse selector experiment." class="span3" />
+                <a href="selector" class="span3">
+                    Visit the CSS mouse selector experiment.
+                </a>
+            </div>
+        </section>
     <section class="contact">
         <h2>contact</h2>
         <p>The best way to contact me is by email to <a href="mailto:larrybedesign@gmail.com">larrybedesign@gmail.com</a>
