@@ -9,4 +9,7 @@
             }, (+speed), 'linear')
         }
     })
+    $('#refresh').click(function(){
+        location.reload()
+    })
 })
