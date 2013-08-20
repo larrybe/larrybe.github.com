@@ -1,0 +1,328 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+h2 {
+    color: #b0b0b0;
+    font-family: 'Corben', cursive;
+}
+
+h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Telex', sans-serif;
+}
+
+a {
+    color: #008000;
+    -webkit-transition: opacity linear 0.8s;
+    -o-transition: opacity linear 0.8s;
+    -moz-transition: opacity linear 0.8s;
+    transition: opacity linear 0.8s;
+}
+
+    a:hover {
+        opacity: 0.6;
+    }
+
+#container {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: 0 0 100px;
+    position: relative;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 00px 10px 0px;
+    z-index: 1;
+}
+
+a > img {
+    width: 130px;
+    float: left;
+    margin-right: 20px;
+}
+
+nav{
+    margin: 30px 0px 0px 0px;
+}
+
+nav > a {
+    font-family: 'Doppio One', sans-serif;
+    margin-right: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.main {
+    z-index: 0;
+}
+
+    .main p {
+        font-size: 20px;
+    }
+
+#text-controls {
+    display: none;
+    background: #fff;
+    border: none;
+}
+
+    #text-controls:before {
+        content: "Font Size";
+    }
+
+.intro {
+    background: url(../images/close-up.jpg) no-repeat center; /*image from Pixabay. URL: http://pixabay.com/en/close-up-fresh-girl-hands-natural-88490/ */
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+    height: 600px;
+}
+
+    .intro h4 {
+        position: relative;
+        top: 125px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 75px;
+        text-align: center;
+        text-transform:  uppercase;
+        margin: 0;
+        color: #fff;
+    }
+
+    .intro a {
+        font-size: 25px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+    }
+
+.donate-btn {
+    text-align: center;
+    position: relative;
+    top: 130px;
+    background-color: #008000;
+    padding: 10px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.no-intro {
+    position: relative;
+    top: 20px;
+    padding-bottom: 500px;
+}
+
+input[type="button"] {
+    border: 1px solid #b0b0b0;
+    padding: 5px;
+}
+
+    input[type="button"]:active {
+        border: 1px solid #fff;
+    }
+
+.overview {
+    padding: 5% 0 500px 2%;
+}
+
+.overview-item {
+    float: left;
+    text-align: center;
+    width: 30%;
+    margin-right: 3%;
+    padding-top: 120px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#community-oriented {
+    background-image: url(../images/comm.svg);
+    background-size: 80px;
+}
+
+#growth {
+    background-image: url(../images/growth.svg);
+    background-size: 120px;
+}
+
+#self-sufficiency {
+    background-image: url(../images/heart.svg);
+    background-size: 135px;
+}
+
+#tel {
+    background-image: url(../images/tel.svg); /*Icon by Brankic1979 url:http://www.brankic1979.com/icons/ */
+}
+
+#email {
+    background-image: url(../images/email.svg); /*Icon by Brankic1979 url:http://www.brankic1979.com/icons/ */
+}
+
+#tel, #email {
+    background-size: 30px;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    margin: 0 0 15px 10px;
+}
+
+.contact a {
+    font-size: 30px;
+}
+
+footer {
+    bottom: 0;
+    height: 250px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #232020;
+}
+
+.foot-links {
+    float: left;
+    width: 80%;
+    margin: 0;
+    padding: 1%;
+    right: 0;
+}
+
+    .foot-links p {
+        color: #fff;
+    }
+
+.foot-group {
+    width: 25%;
+    float: left;
+}
+
+.copyright {
+    margin: 0;
+    padding: 1%;
+    background-color: #000;
+    color: #808080;
+    clear: both;
+}
+
+@media screen and (max-width: 640px) {    
+    header{
+        height: 120px;
+    }
+    
+    a > img {
+    border: 0;
+    width: 120px;
+}
+
+        nav > a {
+        font-size: 15px;
+    }
+    
+    nav{
+        clear: both;
+    }
+    
+    .overview-item {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin-right: 3%;
+        padding-top: 120px;
+    }
+
+
+    footer {
+        height: 400px;
+    }
+
+    .foot-group {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav > a {
+        margin-right: 10px;
+        font-size: 15px;
+    }
+
+    .no-intro {
+        position: relative;
+        top: 20px;
+        padding-bottom: 500px;
+    }
+}
+
+@media print {
+    nav, .intro, .foot-links {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        background: none;
+        padding: 0;
+    }
+
+    .copyright::before {
+    content: "www.sowingtheseed.us"; /*remember to change*/
+    display: block;
+}
+
+    .overview {
+        padding: 0 0 0 2%;
+    }
+
+    .overview-item {
+        float: none;
+        text-align: center;
+        width: 100%;
+        padding-top: 20px;
+        margin-right: 3%;
+        background: none;
+    }
+
+    #text-controls {
+        display: none !important;
+    }
+
+    .no-intro {
+        position: static;
+    }
+
+        .no-intro a {
+            display: none;
+        }
+
+    .contact a {
+        display: inline;
+    }
+
+    #container {
+        padding: 0;
+        position: relative;
+    }
+}
