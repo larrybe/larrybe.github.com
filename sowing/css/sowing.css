@@ -173,6 +173,14 @@ input[type="button"] {
     background-size: 135px;
 }
 
+.board-member{
+    margin-bottom: 75px;
+}
+
+.board-member p{
+    margin: 0;
+}
+
 #tel {
     background-image: url(../images/tel.svg); /*Icon by Brankic1979 url:http://www.brankic1979.com/icons/ */
 }
