@@ -296,7 +296,7 @@ footer {
     }
 
     .copyright::before {
-    content: "www.sowingtheseed.us"; /*remember to change*/
+    content: "www.sowingtheseedministry.org"; /*remember to change*/
     display: block;
 }
 
