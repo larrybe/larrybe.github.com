@@ -1,0 +1,148 @@
+﻿html {
+    width: 100%;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    margin: auto;
+}
+
+.logo {
+    display: block;
+    width: 170px;
+    margin: auto;
+}
+
+    .logo img{
+        border: 0;
+    }
+
+nav {
+    width: 100%;
+    margin: auto;
+    font-family: 'Alegreya SC', serif;
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+}
+
+    nav a {
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+.main, footer {
+    font-family: 'Vollkorn', serif;
+}
+
+    .main h1 {
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+
+    .main h2 {
+        font-size: 1.9em;
+    }
+
+    .main p {
+        font-size: 1.8em;
+        word-wrap: break-word;
+    }
+
+.sec-left {
+    width: 33%;
+    float: left;
+    clear: right;
+}
+
+.sec-right {
+    width: 66%;
+    float: right;
+    margin-right: 0px;
+}
+
+.picture-fact {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4em;
+    color: #fff;
+    height: 400px;
+    clear: both;
+}
+
+.pf1 {
+    background: url('../images/homeless-wall.jpg') no-repeat bottom left; /*Photo Souce http://pixabay.com/en/wall-graffiti-image-company-103388/ */
+    background-size: cover;
+}
+
+.pf2 {
+    background: url('../images/homeless-man.jpg') center left; /*Photo Souce http://www.flickr.com/photos/72098626@N00/2905921539 */
+    background-size: cover;
+}
+
+.pf3 {
+    background: url('../images/homeless-shelter.jpg') no-repeat top left; /* Photo Source http://en.wikipedia.org/wiki/File:US_Navy_090806-N-6220J-004_Sailors_and_Navy_Delayed_Entry_Program_members_serve_breakfast_to_homeless_men_and_women_at_Dorothy%27s_Soup_Kitchen_in_Salinas,_Calif._during_Salinas_Navy_Week_community_service_event.jpg */
+    background-size: cover;
+}
+
+.pf4 {
+    background: url('../images/homeless-group.jpg') no-repeat top center; /* Photo Source http://www.flickr.com/photos/livenature/256941993/ */
+    background-size: cover;
+}
+
+.pf5 {
+    background: url('../images/homeless-chn.jpg') top center;
+    background-size: cover;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 5px solid #000;
+}
+
+@media screen and (max-width: 680px) {
+    body {
+        width: 90%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+        nav a {
+            display: block;
+            font-size: .8em;
+            margin: 0;
+        }
+
+    .sec-left, .sec-right {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+
+    .picture-fact {
+        font-size: 3em;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .picture-fact {
+        font-size: 2.8em;
+    }
+}
+
+@media print {
+    .picture-fact, nav {
+        display: none;
+    }
+}
