@@ -92,7 +92,7 @@ nav {
 }
 
 .pf4 {
-    background: url('../images/homeless-group.jpg') no-repeat top center; /* Photo Source http://www.flickr.com/photos/livenature/256941993/ */
+    background: url('../images/homeless-group.jpg') no-repeat top left; /* Photo Source http://www.flickr.com/photos/livenature/256941993/ */
     background-size: cover;
 }
 
