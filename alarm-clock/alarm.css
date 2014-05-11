@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #df5353;
+}
+
+.time {
+	width: 12em;
+	margin: auto;
+	font-size: 1.5em;
+}
+
+.time > input, .time > select {
+	border: none;
+	font-size: 2em;
+	text-align: center;
+	border: 1px solid rgba(255,255,255,0);
+}
+
+.alarm > input:hover, .alarm > select:hover, .alarm > input:focus {
+	border-bottom: 1px solid #000;
+}
+
+.current{
+	margin-top: 10%;
+}
+
+.current > input[disabled=disabled], .current > select[disabled=disabled]{
+	background-color: #fff;
+	color: #000;
+}
+
+.colon{
+	font-size: 2em;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+	width: 1.5em;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 1px;
+	text-overflow: '';
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+button{
+	position: relative;
+	outline: none;
+	border: 2px solid #000;
+	border-radius: 25px;
+	background-color: rgba(255,255,255,0);
+	box-shadow: 5px 5px 1px #888888;
+	font-size: 1.5em;	
+}
+
+button:active{
+	left: 2px;
+	top: 2px;
+	box-shadow: none;
+	outline: none;
+}
+
+.button{
+	width: 100px;
+	margin: auto;
+	background-color: rgba(255,255,255,0);
+}
+
+.set{
+	margin-top: 10px;
+}
+
+.off{
+	margin-top: 10px;
+}
