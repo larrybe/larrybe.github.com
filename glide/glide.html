@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Glide</title>
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #renderCanvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+    </style>
+    <script src="../libs/babylon.1.14.js"></script>
+    <script src="../libs/hand-1.3.8.js"></script>
+    <script src="../libs/cannon.js"></script>
+    <script src="../libs/ammo.js"></script>
+    <script src="../libs/Oimo.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("renderCanvas");
+        var camera, sailplane, sphere;
+        var engine = new BABYLON.Engine(canvas, true);
+
+        var createScene = function () {
+            var scene = new BABYLON.Scene(engine);
+
+            scene.clearColor = new BABYLON.Color3(0.5, 0.5, 0.8);
+
+            //physics scene
+            scene.enablePhysics();
+            //scene.gravity = new BABYLON.Vector3(0, -1, 0);
+            scene.setGravity(new BABYLON.Vector3(0, -10.0, 0));
+            scene.collisionsEnabled = true;
+
+            //FREE CAMERA
+            camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(1, 51, 112), scene);
+            camera.setTarget(BABYLON.Vector3.Zero());
+            camera.position = new BABYLON.Vector3(2.976, 23.832, 144.024);
+            camera.rotation = new BABYLON.Vector3(0.119, -3.135, 0);
+            //camera.attachControl(canvas, false);
+            
+            //FOLLOW CAMERA
+            //camera = new BABYLON.FollowCamera("camera1", new BABYLON.Vector3(1, 51, 112), scene);
+            //camera.attachControl(canvas, false);
+
+
+            var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+            light.intensity = .5;
+
+            //var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "dem1.png", 200, 200, 250, -.5, 10, scene, false);
+            var ground = BABYLON.Mesh.CreateGround("ground", 200, 200, 100, scene);
+            ground.position = new BABYLON.Vector3(0, 0, 0);
+            var groundMat = new BABYLON.StandardMaterial("groundwire", scene);
+            //groundMat.diffuseColor = new BABYLON.Color3(0.0, 1.0, 0.0)
+            groundMat.wireframe = true;
+            ground.material = groundMat;
+            ground.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, move: false });
+            ground.checkCollisions = true;
+
+            var groundRay = new BABYLON.Ray(ground.position, new BABYLON.Vector3(0, -1, 0));
+            
+
+            sphere = BABYLON.Mesh.CreateSphere("sphere", 5.0, 5.0, scene);
+            var sphereMat = new BABYLON.StandardMaterial("sphereMaterial", scene);
+            sphereMat.diffuseColor = new BABYLON.Color3(1.0, 0.0, 0.0);
+            sphere.material = sphereMat;
+            sphere.position = new BABYLON.Vector3(0, 25, 50);
+            //sphere.setPhysicsState({ impostor: BABYLON.PhysicsEngine.SphereImpostor, move: true, mass: 1, friction: 0.5, restitution: 3.0 });
+            camera.target = sphere;
+            sphere.checkCollisions = true;
+
+            //sphere.actionManager = new BABYLON.ActionManager(scene);
+            //sphere.actionManager.registerAction(new BABYLON.IncrementValueAction(BABYLON.ActionManager.OnKeyDownTrigger, sphere, "position.x", 10));
+
+            sphere.intersects(groundRay);
+
+           
+
+            /*var glider = BABYLON.SceneLoader.ImportMesh("glider", "", "sailplane.babylon", scene, function (mesh) {
+                sailplane = mesh[0];
+                sailplane.position = new BABYLON.Vector3(0, 25, 100);
+                //sailplane.rotation = new BABYLON.Vector3(1.2, 0.5, 0.6);
+                camera.target = sailplane;
+                //sailplane.setPhysicsState({ impostor: BABYLON.PhysicsEngine.BoxImpostor, move: true, mass: 1, friction: 0.5, restitution: 0.2 });
+                sailplane.checkCollisions = true;
+                sailplane.applyGravity = true;
+            });*/
+
+            return scene;
+        }
+
+        var scene = createScene();
+
+        scene.actionManager = new BABYLON.ActionManager(scene);
+        scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyDownTrigger,
+            function (event) {
+                if (event.sourceEvent.key == 'd') {
+                    sailplane.rotation.z -= .05;
+                }
+            }))
+
+
+        //---------------------------
+        var leftPressed = false;
+        var upPressed = false;
+        var rightPressed = false;
+        var downPressed = false;      
+        var lastTime = null;
+
+        function onKeyLeft(pressed) {
+            leftPressed = pressed;
+        }
+
+        function onKeyUp(pressed) {
+            upPressed = pressed;
+        }
+
+        function onKeyRight(pressed) {
+            rightPressed = pressed;
+        }
+
+        function onKeyDown(pressed) {
+            downPressed = pressed;
+        }
+
+        window.addEventListener("keydown", onKeyDown, false);
+
+        function onKeyDown(e) {
+            var keyCode = e.keyCode;
+            switch (keyCode) {
+                case 37:
+                    //left
+                    onKeyLeft(true);
+                    break;
+                case 38:
+                    //up
+                    onKeyUp(true);
+                    break;
+                case 39:
+                    //right
+                    onKeyRight(true);
+                    break;
+                case 40:
+                    //down
+                    onKeyDown(true);
+                    break;
+            }
+        }
+
+        window.addEventListener("keyup", onKeyUp, false);
+
+        function onKeyUp(e) {
+            var keyCode = e.keyCode;
+            switch (keyCode) {
+                case 37:
+                    onKeyLeft(false);
+                    break;
+                case 38:
+                    onKeyUp(false);
+                    break;
+                case 39:
+                    onKeyRight(false);
+                    break;
+                case 40:
+                    onKeyDown(false);
+                    break;
+            }
+        }
+        //-------------------------------------
+
+
+        engine.runRenderLoop(function () {
+            scene.render();
+            var delta = BABYLON.Tools.GetDeltaTime();
+            if (leftPressed) {
+                sphere.position.x += 0.01 * delta;
+            }
+            if (upPressed) {
+                sphere.position.x += 0.01 * delta;
+            }
+            if (rightPressed) {
+                sphere.position.x -= 0.01 * delta;
+            }
+            if (downPressed) {
+                sphere.position.x += 0.01 * delta;
+            }
+        })
+
+        window.addEventListener("resize", function () {
+            engine.resize();
+        })
+    </script>
+</body>
+</html>
