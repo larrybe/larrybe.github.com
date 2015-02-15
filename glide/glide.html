@@ -18,27 +18,76 @@
             touch-action: none;
         }
     </style>
-    <script src="../libs/babylon.1.14.js"></script>
+    <script src="../libs/babylon.2.0.js"></script>
     <script src="../libs/hand-1.3.8.js"></script>
-    <script src="../libs/cannon.js"></script>
-    <script src="../libs/ammo.js"></script>
+    <script src="../libs/Oimo.rev.js"></script>
     <script src="../libs/Oimo.js"></script>
+    
 </head>
 <body>
     <canvas id="renderCanvas"></canvas>
 
     <script>
         var canvas = document.getElementById("renderCanvas");
-
         var engine = new BABYLON.Engine(canvas, true);
+        var glider, gliderTail, gliderVStab, gliderWingLeft, gliderWingRight;
 
         BABYLON.SceneLoader.Load("", "glider.babylon", engine, function (newScene) {
             newScene.executeWhenReady(function () {
-                newScene.activeCamera.attachControl(canvas);
-                newScene.clearColor = new BABYLON.Color3(.529, .808, .98);
+                //newScene.activeCamera.attachControl(canvas);
                 console.log(newScene);
+                newScene.clearColor = new BABYLON.Color3(.529, .808, .98);              
+                newScene.enablePhysics();
+                newScene.setGravity(new BABYLON.Vector3(0, -10, 0));
+                newScene.collisionsEnabled = true;              
+
+                ground = newScene.getMeshByName("landscape");
+                glider = newScene.getMeshByName("glider");
+                gliderTail = newScene.getMeshByName("gliderTail");
+                gliderVStab = newScene.getMeshByName("gliderVStab");
+                gliderWingLeft = newScene.getMeshByName("gliderWingLeft");
+                gliderWingRight = newScene.getMeshByName("gliderWingRight");
+
+                console.log(glider);
+
+                glider.setPhysicsState({ impostor: BABYLON.PhysicsEngine.SphereImpostor, mass: 1 });
+                glider.checkCollisions = true;
+                glider.applyImpulse(new BABYLON.Vector3(0, 100, 100), glider.getBoundingInfo().boundingBox.center);
+                glider.showBoundingBox = true;
+
+                var arcCamera = new BABYLON.ArcRotateCamera("arcRotateCamera", 1, 0.8, 10, glider.position, newScene)
+                arcCamera.setPosition(newScene.activeCamera.position);
+                arcCamera.keysUp = [];
+                arcCamera.keysDown = [];
+                arcCamera.keysLeft = [];
+                arcCamera.keysRight = [];
+                arcCamera.wheelPrecision = 1000000;
+                newScene.activeCamera = arcCamera;
+                newScene.activeCamera.attachControl(canvas);
+
                 engine.runRenderLoop(function () {
                     newScene.render();
+                    if (leftPressed) {
+                        
+                        glider.rotation.z -= 0.01;
+                        //glider.rotation.y -= 0.01;
+                        //glider.rotationQuaternion.x -= 0.1;
+                        //glider.applyImpulse(new BABYLON.Vector3(-0.1, 0, 0), glider.position)
+                        //glider.rotation = BABYLON.Quaternion.RotationYawPitchRoll(0, 0, 270 * (Math.PI / 180));
+                    }
+                    if (upPressed) {
+                        glider.rotation.x -= 0.01;
+                        //glider.applyImpulse(new BABYLON.Vector3(0, 0.1, 0), glider.position)
+                    }
+                    if (rightPressed) {
+                        glider.rotation.z += 0.01;
+                        //glider.applyImpulse(new BABYLON.Vector3(0.1, 0, 0), glider.position)
+                    }
+                    if (downPressed) {
+                        glider.rotation.x += 0.01;
+                        //glider.applyImpulse(new BABYLON.Vector3(0, -0.1, 0), glider.position)
+                    }
+
                 });
             });
         }, function (progress) {
@@ -47,6 +96,74 @@
         window.addEventListener("resize", function () {
             engine.resize();
         })
+
+
+        //---------------------------------------------
+        var leftPressed = false;
+        var upPressed = false;
+        var rightPressed = false;
+        var downPressed = false;
+        var lastTime = null;
+
+        function onLeftArrow(pressed) {
+            leftPressed = pressed;
+        }
+
+        function onUpArrow(pressed) {
+            upPressed = pressed;
+        }
+
+        function onRightArrow(pressed) {
+            rightPressed = pressed;
+        }
+
+        function onDownArrow(pressed) {
+            downPressed = pressed;
+        }
+
+        window.addEventListener("keydown", onKeyDown, false);
+
+        function onKeyDown(e) {
+            var keyCode = e.keyCode;
+            switch (keyCode) {
+                case 37:
+                    //left
+                    onLeftArrow(true);
+                    break;
+                case 38:
+                    //up
+                    onUpArrow(true);
+                    break;
+                case 39:
+                    //right
+                    onRightArrow(true);
+                    break;
+                case 40:
+                    //down
+                    onDownArrow(true);
+                    break;
+            }
+        }
+
+        window.addEventListener("keyup", onKeyUp, false);
+
+        function onKeyUp(e) {
+            var keyCode = e.keyCode;
+            switch (keyCode) {
+                case 37:
+                    onLeftArrow(false);
+                    break;
+                case 38:
+                    onUpArrow(false);
+                    break;
+                case 39:
+                    onRightArrow(false);
+                    break;
+                case 40:
+                    onDownArrow(false);
+                    break;
+            }
+        }
     </script>
 </body>
 </html>
