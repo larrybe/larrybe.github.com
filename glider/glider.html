@@ -18,44 +18,8 @@
             touch-action: none;
         }
     </style>
-    <script src="../libs/babylon.2.0.debug.js"></script>
-    <script src="../libs/hand-1.3.8.js"></script>
-    <script type="application/vertexShader" id="cloudsVertexShader">
-        precision highp float;
-
-        attribute vec3 position;
-        attribute vec2 uv;
-
-        uniform mat4 worldViewProjection;
-
-        varying vec2 vUV;
-
-        void main(void){
-        gl_Position = worldViewProjection * vec4(position, 1.0);
-
-        vUV =  uv;
-        }
-    </script>
-
-    <script type="application/fragmentShader" id="cloudsFragmentShader">
-        precision highp float;
-        varying vec2 vUV;
-
-        uniform vec3 fogColor;
-        uniform float fogNear;
-        uniform float fogFar;
-
-        uniform sampler2D textureSampler;
-
-        void main(void){
-        float depth = gl_FragCoord.z / gl_FragCoord.w;
-        float fogFactor = smoothstep(fogNear, fogFar, depth);
-
-        gl_FragColor = texture2D(textureSampler, vUV);
-        gl_FragColor.w *= pow(abs(gl_FragCoord.z), 20.0);
-        gl_FragColor = mix(gl_FragColor, vec4(fogColor, gl_FragColor.w), fogFactor);
-        }
-    </script>
+    <script src="libs/hand-1.3.8.js"></script>
+    <script src="libs/babylon.2.0.js"></script>   
 
     <script>
         document.addEventListener("DOMContentLoaded", start, false);
@@ -68,18 +32,53 @@
             BABYLON.SceneLoader.Load("", "glider.babylon", engine, function (scene) {
                 // Wait for textures and shaders to be ready
                 scene.executeWhenReady(function () {
+                    scene.collisionsEnabled = true;
+
+                    var pointLight = new BABYLON.PointLight("pointlight", new BABYLON.Vector3(0, 100000, 0), scene);
+                    pointLight.diffuse = new BABYLON.Color3(1, .886, .655);
+                    pointLight.specular = new BABYLON.Color3(.451, .604, .671);
+
+                    //var hemisphericLight = new BABYLON.HemisphericLight("hemisphericLight", new BABYLON.Vector3(0, 1, 0), scene);
+                    //hemisphericLight.diffuse = new BABYLON.Color3(1, 1, 1);
+
                     var glider = scene.meshes[0];
                     glider.position = new BABYLON.Vector3(0, 17000, 0);
+                    glider.checkCollisions = true;
+                    glider.ellipsoid = new BABYLON.Vector3(0.5, 1, 0.5);
 
-                    var hemisphericLight = new BABYLON.HemisphericLight("hemisphericLight", new BABYLON.Vector3(0, 1, 0), scene);
-                    hemisphericLight.diffuse = new BABYLON.Color3(1, 1, 1);
+                    var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
+                    groundMaterial.diffuseTexture = new BABYLON.Texture("assets/demmaterial.png", scene);
+                    var ground = new BABYLON.Mesh.CreateGroundFromHeightMap("ground", "assets/dem.bmp", 1000000, 1000000, 100, -30000, 50000, scene, false);
+                    ground.material = groundMaterial;
 
+                    /*var ground = new BABYLON.Mesh.CreateGround("ground", 1000000000.0, 1000000.0, 10, scene);
+                    ground.position = new BABYLON.Vector3(0, 0, 0);
+                    groundmat = new BABYLON.StandardMaterial("groundmat", scene);
+                    //groundmat.diffuseTexture = new BABYLON.Texture("assets/amiga.jpg", scene);
+                    groundmat.diffuseColor = new BABYLON.Color3(0.3, .5, 0.3);
+                    ground.material = groundmat;
+                    ground.checkCollisions = true;
+
+                    var grassSpriteManager = new BABYLON.SpriteManager("grassManager", "assets/grass1.png", 2000, 690, scene);
+                    for (var i = 0; i < 2000; i++) {
+                        var grass = new BABYLON.Sprite("grass", grassSpriteManager);
+                        grass.position.x = Math.random() * 100 //- 50;
+                        grass.position.y = 1;
+                        grass.position.z = Math.random() * 100 //- 50;
+                        grass.size = Math.random() * 10;
+                    }*/
+
+                    //var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.58, 1.265, 30, ground.position, scene);
                     var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.58, 1.265, 12, glider.position, scene);
                     //camera.fov = 30;
                     //camera.minZ = 1;
                     //camera.maxZ = 3000;
 
-                    //var camera = new BABYLON.FollowCamera("followCamera", new BABYLON.Vector3(0, 17000, 0), scene);
+                    //var camera = new BABYLON.FollowCamera("followCamera", ground.position, scene);
+                    //var camera = new BABYLON.FreeCamera("FreeCamera", new BABYLON.Vector3(0, 25000, 0), scene);
+                    //camera.speed = 500;
+                    //camera.minZ = .0001000;
+                    //camera.maxZ = 10000;
                     //camera.target = glider;
                     //camera.radius = 15;
                     //camera.rotationOffset = 90;
@@ -101,21 +100,15 @@
                     textureContext.fillRect(0, 0, 512, 512);
                     background.texture.update();
 
-                    var ground = new BABYLON.Mesh.CreateGround("ground", 1000000.0, 1000000.0, 10, scene);
-                    ground.position = new BABYLON.Vector3(0, 0, 0);
-                    groundmat = new BABYLON.StandardMaterial("groundmat", scene);
-                    groundmat.diffuseTexture = new BABYLON.Texture("../assets/amiga.jpg", scene);
-                    ground.material = groundmat;
-
                     ///////////////////////////////////////////////////////////////////////////////
-                    var cloudSpriteManager = new BABYLON.SpriteManager("cloudManager", "../assets/cloud.png", 2000, 800, scene);
-                    for (var i = 0; i < 200; i++) {
-                        var cloud = new BABYLON.Sprite("cloud", cloudSpriteManager);
-                        cloud.position.x = Math.random() * 100 - 50;
-                        cloud.position.y = 16950;
-                        cloud.position.z = Math.random() * 100 - 50;
-                        cloud.size = Math.random() * 50;
-                    }
+                    //var cloudSpriteManager = new BABYLON.SpriteManager("cloudManager", "assets/cloud.png", 2000, 800, scene);
+                    //for (var i = 0; i < 200; i++) {
+                    //    var cloud = new BABYLON.Sprite("cloud", cloudSpriteManager);
+                    //    cloud.position.x = Math.random() * 100 - 50;
+                    //    cloud.position.y = 16950;
+                    //     cloud.position.z = Math.random() * 100 - 50;
+                    //     cloud.size = Math.random() * 50;
+                    //}
 
 
                     /////////////////////////////////////////////////////////////////////////////////
@@ -126,14 +119,14 @@
                     var keysDown = {};
 
                     // units per second
-                    var airSpeed = -1.5;
-                    var rateOfDescent = -1.0;
+                    var airSpeed = -15.0; //original value: 1.5
+                    var rateOfDescent = -10.0; // original value: 1
 
                     // degrees per second
                     var turnSpeed = 10.0;
 
                     // keep track of the last time movement was processed, in microseconds
-                    var lastFrame = -1;       
+                    var lastFrame = -1;
 
                     document.onkeydown = handleKeyDown;
                     document.onkeyup = handleKeyUp;
@@ -207,21 +200,23 @@
 
                         // =============================================================================
 
-                        //glider.translate(BABYLON.Axis.Z, elapsed + airSpeed, BABYLON.Space.LOCAL);
-                        //glider.translate(BABYLON.Axis.Y, elapsed + rateOfDescent, BABYLON.Space.LOCAL);
+                        glider.translate(BABYLON.Axis.Z, elapsed + airSpeed, BABYLON.Space.LOCAL);
+                        glider.translate(BABYLON.Axis.Y, elapsed + rateOfDescent, BABYLON.Space.LOCAL);
 
                         glider.rotate(BABYLON.Axis.X, xRot / 10, BABYLON.Space.WORLD);
                         glider.rotate(BABYLON.Axis.Y, yRot / 10, BABYLON.Space.WORLD);
                         glider.rotate(BABYLON.Axis.Z, zRot / 10, BABYLON.Space.WORLD);
 
                         // =============================================================================
-
+                        camera.target = glider;
                     }
 
                     engine.runRenderLoop(function () {
-                        animate();
+                        //animate();
                         //console.log(glider.rotation);
-                        //console.log(glider.getAbsolutePosition());
+                        if (glider.getAbsolutePosition().y < 100) {
+                            console.log(glider.getAbsolutePosition());
+                        }
                         //camera.beta += .001
                         //console.log(camera.beta);
                         //camera.alpha += .01

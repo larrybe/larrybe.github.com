@@ -1,12 +1,12 @@
-﻿BURN IT DOWN. START OVER.
-
-1. Background and Camera controls
+﻿1. Background [done]
+	Camera controls
 2. Clouds
-3. Model Ground in blender and import
-4. Import Glider
+3. Model Ground in blender and import[nope]
+4. Import Glider[done]
 5. Glider controls
 6. Physics (maybe?)
 7. Astroid
+8. Aknowledgements.
 
 
 					      var cloudMaterial = new BABYLON.ShaderMaterial("cloud", scene, {
