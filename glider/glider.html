@@ -27,7 +27,6 @@
         function start() {
             var canvas = document.getElementById("canvas");
             var engine = new BABYLON.Engine(canvas, true);
-            //var scene = new BABYLON.Scene(engine);
 
             BABYLON.SceneLoader.Load("", "glider.babylon", engine, function (scene) {
                 // Wait for textures and shaders to be ready
@@ -35,19 +34,22 @@
                     scene.collisionsEnabled = true;
 
                     var pointLight = new BABYLON.PointLight("pointlight", new BABYLON.Vector3(0, 100000, 0), scene);
-                    pointLight.diffuse = new BABYLON.Color3(1, .886, .655);
-                    pointLight.specular = new BABYLON.Color3(.451, .604, .671);
+                    pointLight.diffuse = new BABYLON.Color3(1, .702, .208);
+                    pointLight.specular = new BABYLON.Color3(.925, .576, 0);
 
-                    //var hemisphericLight = new BABYLON.HemisphericLight("hemisphericLight", new BABYLON.Vector3(0, 1, 0), scene);
-                    //hemisphericLight.diffuse = new BABYLON.Color3(1, 1, 1);
+                    var hemisphericLight = new BABYLON.HemisphericLight("hemisphericLight", new BABYLON.Vector3(0, 1, 0), scene);
+                    hemisphericLight.diffuse = new BABYLON.Color3(.686, .835, .871);
 
                     var glider = scene.meshes[0];
-                    glider.position = new BABYLON.Vector3(0, 17000, 0);
+                    glider.position = new BABYLON.Vector3(0, 3000, 0); //y was 17000
                     glider.checkCollisions = true;
                     glider.ellipsoid = new BABYLON.Vector3(0.5, 1, 0.5);
 
                     var groundMaterial = new BABYLON.StandardMaterial("ground", scene);
-                    groundMaterial.diffuseTexture = new BABYLON.Texture("assets/demmaterial.png", scene);
+                    groundMaterial.diffuseTexture = new BABYLON.Texture("assets/demmaterial.jpg", scene);
+                    groundMaterial.specularTexture = new BABYLON.Texture("assets/demmaterial_s.jpg", scene);
+                    //groundMaterial.ambientTexture = new BABYLON.Texture("assets/demmaterial_a.jpg", scene);
+                    //groundMaterial.bumpTexture = new BABYLON.Texture("assets/demmaterial_mn.jpg", scene);
                     var ground = new BABYLON.Mesh.CreateGroundFromHeightMap("ground", "assets/dem.bmp", 1000000, 1000000, 100, -30000, 50000, scene, false);
                     ground.material = groundMaterial;
 
@@ -69,21 +71,27 @@
                     }*/
 
                     //var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.58, 1.265, 30, ground.position, scene);
-                    var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.58, 1.265, 12, glider.position, scene);
-                    //camera.fov = 30;
-                    //camera.minZ = 1;
-                    //camera.maxZ = 3000;
+                    /*var camera = new BABYLON.ArcRotateCamera("ArcRotateCamera", 1.58, 1.265, 15, glider.position, scene);
+                    camera.keysUp = "38";
+                    camera.keysDown = "40";
+                    camera.keysLeft = "37";
+                    camera.keysRight = "39";
+                    camera.fov = 1.15;
+                    camera.minZ = .1;
+                    camera.maxZ = 10000;*/
 
                     //var camera = new BABYLON.FollowCamera("followCamera", ground.position, scene);
-                    //var camera = new BABYLON.FreeCamera("FreeCamera", new BABYLON.Vector3(0, 25000, 0), scene);
-                    //camera.speed = 500;
-                    //camera.minZ = .0001000;
-                    //camera.maxZ = 10000;
+                    /**/var camera = new BABYLON.FreeCamera("FreeCamera", new BABYLON.Vector3(0, 25000, 0), scene);
+                    camera.speed = 500;
+                    camera.minZ = .0001;
+                    camera.maxZ = 10000;
+                    camera.fov = 1.15;
                     //camera.target = glider;
                     //camera.radius = 15;
                     //camera.rotationOffset = 90;
                     //camera.target = glider.position;
                     camera.attachControl(canvas);
+                    console.log(camera);
 
                     var background = new BABYLON.Layer("background", null, scene, true);
                     background.texture = new BABYLON.DynamicTexture("dynamicTexture", 512, scene, true);
@@ -119,8 +127,8 @@
                     var keysDown = {};
 
                     // units per second
-                    var airSpeed = -15.0; //original value: 1.5
-                    var rateOfDescent = -10.0; // original value: 1
+                    var airSpeed = -7.5; //original value: 1.5
+                    //var rateOfDescent = -5.0; // original value: 1
 
                     // degrees per second
                     var turnSpeed = 10.0;
@@ -201,7 +209,7 @@
                         // =============================================================================
 
                         glider.translate(BABYLON.Axis.Z, elapsed + airSpeed, BABYLON.Space.LOCAL);
-                        glider.translate(BABYLON.Axis.Y, elapsed + rateOfDescent, BABYLON.Space.LOCAL);
+                        //glider.translate(BABYLON.Axis.Y, elapsed + rateOfDescent, BABYLON.Space.LOCAL);
 
                         glider.rotate(BABYLON.Axis.X, xRot / 10, BABYLON.Space.WORLD);
                         glider.rotate(BABYLON.Axis.Y, yRot / 10, BABYLON.Space.WORLD);
@@ -214,13 +222,9 @@
                     engine.runRenderLoop(function () {
                         //animate();
                         //console.log(glider.rotation);
-                        if (glider.getAbsolutePosition().y < 100) {
-                            console.log(glider.getAbsolutePosition());
-                        }
-                        //camera.beta += .001
-                        //console.log(camera.beta);
-                        //camera.alpha += .01
-                        //console.log(camera.alpha);
+                        //if (glider.getAbsolutePosition().y < 100) {
+                        //    console.log(glider.getAbsolutePosition());
+                        //}
                         scene.render();
                     });
 
