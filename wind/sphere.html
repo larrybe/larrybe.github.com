@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sphere for GLSL test</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #canvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+    </style>
+    <script src="../libs/babylon.js"></script>
+
+    <script type="application/vertexShader" id="vertexShaderCode">
+        
+    </script>
+
+    <script type="application/fragmentShader" id="fragmentShaderCode">
+
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start, false);
+
+        function start() {
+            var canvas = document.getElementById("canvas");
+            var engine = new BABYLON.Engine(canvas, false);
+            var scene = new BABYLON.Scene(engine);
+            var camera = new BABYLON.ArcRotateCamera("camera", 0, Math.PI / 2, 10, BABYLON.Vector3.Zero(), scene);
+            camera.attachControl(canvas);
+
+            var light = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(0, 1, 0), scene);
+            light.diffuse = new BABYLON.Color3(1, 1, 1);
+
+            //var sphere = new BABYLON.Mesh.CreateSphere("sphere", 32, 5, scene);
+            
+            var emitter = new BABYLON.Mesh.CreateBox("emitter", 1, scene);
+            //emitter.rotation.y = Math.PI;
+            var ps = new BABYLON.ParticleSystem("ps", 200, scene);
+            ps.particleTexture = new BABYLON.Texture("particletest.png", scene);
+            ps.textureMask = new BABYLON.Color4(0.1, 0.8, 0.8, 1.0);
+            ps.gravity = new BABYLON.Vector3(0, -5, 0);
+            ps.emitter = emitter;
+
+            engine.runRenderLoop(function () {
+                scene.render();
+            })
+
+            window.addEventListener("resize", function () {
+                engine.resize();
+            });
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+</html>
