@@ -1,4 +1,9 @@
-﻿var audioData = new Object();
+﻿var micPermission = new Object;
+micPermission.div = document.getElementById("permission");
+micPermission.btn = document.getElementsByTagName("button")[0];
+micPermission.asked = false;
+
+var audioData = new Object();
 audioData.sum = null;
 audioData.now = null;
 audioData.total = null;
@@ -20,6 +25,9 @@ navigator.getUserMedia = (navigator.getUserMedia ||
                           navigator.msGetUserMedia);
 
 function getStream(stream) {
+    if (!micPermission.asked){
+        enableMicPermBtn();
+    }
     //source = audioContext.createMediaStreamSource(stream);
     window.source = audioContext.createMediaStreamSource(stream);
     processor = audioContext.createScriptProcessor(2048);
@@ -40,7 +48,26 @@ function processInput(e) {
     audioData.sum = null;
 }
 
-function itFailed() {
+navigator.getUserMedia({ audio: true }, getStream, itFailed);
+
+function itFailed() {   
+    micPermission.btn.style.backgroundColor = "#ff0000";
+    micPermission.btn.style.color = "#fff";
+    //micPermission.btn.style.borderColor = "ff0000";
+    micPermission.btn.textContent = "Error - Access Denied.";
 }
 
-navigator.getUserMedia({ audio: true }, getStream, itFailed);
+function enableMicPermBtn() {
+    micPermission.btn.removeAttribute("disabled");
+    micPermission.btn.style.backgroundColor = "#00c777";
+    micPermission.btn.style.border = "2px outset #00c777";
+    micPermission.btn.style.color = "#fff";
+    micPermission.btn.textContent = "Continue";
+    micPermission.btn.addEventListener("click", removePermissionDiv, false);
+    micPermission.asked = true;
+}
+
+function removePermissionDiv() {
+    micPermission.div.remove();
+}
+
