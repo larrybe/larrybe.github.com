@@ -28,7 +28,6 @@ function getStream(stream) {
     if (!micPermission.asked){
         enableMicPermBtn();
     }
-    //source = audioContext.createMediaStreamSource(stream);
     window.source = audioContext.createMediaStreamSource(stream);
     processor = audioContext.createScriptProcessor(2048);
     source.connect(processor);
@@ -53,7 +52,6 @@ navigator.getUserMedia({ audio: true }, getStream, itFailed);
 function itFailed() {   
     micPermission.btn.style.backgroundColor = "#ff0000";
     micPermission.btn.style.color = "#fff";
-    //micPermission.btn.style.borderColor = "ff0000";
     micPermission.btn.textContent = "Error - Access Denied.";
 }
 
