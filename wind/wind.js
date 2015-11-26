@@ -90,11 +90,11 @@ function start() {
                 scene.render();
                 audioData.total += audioData.now - 100;
                 if (audioData.total < 0) { audioData.total = 0 }
-                if (audioData.total > 50000) { audioData.total = 50000 }
+                if (audioData.total > 60000) { audioData.total = 60000 }
                 if (audioData.total > 10000) { darkenSky(audioData.total) }
                 if (audioData.total > 7000) { rain(audioData.total) }
                 spinWindmill(audioData.total);
-                progressBar.style.width = parseInt((audioData.total / 50000) * 100, 10) + "%";
+                progressBar.style.width = parseInt((audioData.total / 60000) * 100, 10) + "%";
             });
 
             window.addEventListener("resize", function () {
