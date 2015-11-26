@@ -1,7 +1,6 @@
 ﻿document.addEventListener("DOMContentLoaded", start, false);
 
 function start() {
-    var permission = document.getElementById("permission");
     var progressBar = document.getElementById("progressBar");
 
     var canvas = document.getElementById("canvas");
