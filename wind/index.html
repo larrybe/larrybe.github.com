@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Wind</title>
+    <link rel="stylesheet" type="text/css" href="wind.css"> 
+    <script src="https.js"></script>
+</head>
+<body>
+    <div id="permission">
+        <div id="permissionCheck">
+            <h1>Wind</h1>
+            <p>
+                Blow (or make any noise at all) into your microphone to
+                change the weather conditions in the scene.
+            </p>
+            <p>
+                This project requires the use of your microphone.
+                <br />No data is collected or transmitted.
+            </p>
+            <button disabled>
+                Requesting permission to use your microphone.
+            </button>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="progress">
+        <div id="progressBar"></div>
+    </div>
+    <script src="../libs/babylon.2.2.js"></script>
+    <script src="../libs/Oimo.js"></script>
+    <script src="getaudio.js"></script>
+    <script src="wind.js"></script>
+</body>
+</html>
