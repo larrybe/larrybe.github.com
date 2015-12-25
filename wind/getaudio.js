@@ -16,7 +16,10 @@ window.msAudioContext);
 if (contextClass) {
     var audioContext = new contextClass();
 } else {
-    console.log("Audio API not supported");
+    console.log("Your browser doesn't support Web Audio API, which this project relies on. Please consider updating your browser.");
+    micPermission.btn.style.backgroundColor = "#ff0000";
+    micPermission.btn.style.color = "#fff";
+    micPermission.btn.textContent = "Audio API not supported by your browser.";
 }
 
 navigator.getUserMedia = (navigator.getUserMedia ||
@@ -63,6 +66,7 @@ function enableMicPermBtn() {
     micPermission.btn.textContent = "Continue";
     micPermission.btn.addEventListener("click", removePermissionDiv, false);
     micPermission.asked = true;
+    removePermissionDiv()
 }
 
 function removePermissionDiv() {
