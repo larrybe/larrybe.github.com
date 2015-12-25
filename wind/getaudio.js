@@ -66,7 +66,6 @@ function enableMicPermBtn() {
     micPermission.btn.textContent = "Continue";
     micPermission.btn.addEventListener("click", removePermissionDiv, false);
     micPermission.asked = true;
-    removePermissionDiv()
 }
 
 function removePermissionDiv() {
