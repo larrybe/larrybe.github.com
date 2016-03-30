@@ -1,13 +1,10 @@
 ﻿{
-  "five": [
+  "2005": [
     {
       "title": "Harry Potter and the Goblet of Fire",
       "domestic": 290.0,
-      "worldwide": 606.9,
+      "foreign": 606.9,
       "budget": 150,
-      "inflDomestic": 393,
-      "inflWorldwide": 1089,
-      "inflBudget":  182,
       "time": 153,
       "genre": [ "Fantasy" ],
       "source": [ "Book", "Sequel" ],
@@ -20,11 +17,8 @@
     {
       "title": "Star Wars: Episode III - Revenge of the Sith",
       "domestic": 380.3,
-      "worldwide": 848.8,
+      "foreign": 468.5,
       "budget": 113,
-      "inflDomestic": 516.1,
-      "inflWorldwide": 1031,
-      "inflBudget": 137,
       "time": 146,
       "genre": [ "Fantasy" ],
       "source": [ "Sequel" ],
@@ -37,11 +31,8 @@
     {
       "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
       "domestic": 291.7,
-      "worldwide": 745,
+      "foreign": 453.3,
       "budget": 180,
-      "inflDomestic": 393,
-      "inflWorldwide": 904.5,
-      "inflBudget": 219,
       "time": 132,
       "genre": [ "Fantasy" ],
       "source": [ "Book" ],
@@ -54,11 +45,8 @@
     {
       "title": "War of the Worlds",
       "domestic": 234.3,
-      "worldwide": 591.7,
+      "foreign": 357.4,
       "budget": 132,
-      "inflDomestic": 318,
-      "inflWorldwide": 718.4,
-      "inflBudget": 160,
       "time": 177,
       "genre": [ "Sci-Fi" ],
       "source": [ "Book" ],
@@ -71,11 +59,8 @@
     {
       "title": "King Kong",
       "domestic": 218.1,
-      "worldwide": 550.5,
+      "foreign": 332.4,
       "budget": 207,
-      "inflDomestic": 293.8,
-      "inflWorldwide": 668.4,
-      "inflBudget": 251,
       "time": 187,
       "genre": [ "Adventure" ],
       "source": [ "Remake" ],
@@ -88,11 +73,8 @@
     {
       "title": "Madagascar",
       "domestic": 193.6,
-      "worldwide": 532.7,
+      "foreign": 339.1,
       "budget": 75,
-      "inflDomestic": 262.8,
-      "inflWorldwide": 646.7,
-      "inflBudget": 91,
       "time": 86,
       "genre": [ "Animation" ],
       "source": [ "Original" ],
@@ -105,11 +87,8 @@
     {
       "title": "Mr. & Mrs. Smith",
       "domestic": 186.3,
-      "worldwide": 478.2,
+      "foreign": 291.9,
       "budget": 110,
-      "inflDomestic": 252.9,
-      "inflWorldwide": 580.6,
-      "inflBudget": 134,
       "time": 115,
       "genre": [ "Action" ],
       "source": [ "Original" ],
@@ -122,11 +101,8 @@
     {
       "title": "Charlie and the Chocolate Factory",
       "domestic": 206.5,
-      "worldwide": 475,
+      "foreign": 268.5,
       "budget": 150,
-      "inflDomestic": 280.2,
-      "inflWorldwide": 576.7,
-      "inflBudget": 182,
       "time": 106,
       "genre": [ "Family" ],
       "source": [ "Book" ],
@@ -139,11 +115,8 @@
     {
       "title": "Batman Begins",
       "domestic": 206.9,
-      "worldwide": 374.2,
+      "foreign": 167.3,
       "budget": 150,
-      "inflDomestic": 280.3,
-      "inflWorldwide": 454.3,
-      "inflBudget": 182,
       "time": 140,
       "genre": [ "Action" ],
       "source": [ "Comic" ],
@@ -156,11 +129,8 @@
     {
       "title": "Hitch",
       "domestic": 179.5,
-      "worldwide": 368.1,
+      "foreign": 188.6,
       "budget": 70,
-      "inflDomestic": 243.6,
-      "inflWorldwide": 446.9,
-      "inflBudget": 85,
       "time": 115,
       "genre": [ "Comedy" ],
       "source": [ "Original" ],
@@ -173,11 +143,8 @@
     {
       "title": "Fantastic Four",
       "domestic": 154.7,
-      "worldwide": 330.6,
+      "foreign": 175.9,
       "budget": 100,
-      "inflDomestic": 210,
-      "inflWorldwide": 401.4,
-      "inflBudget": 121,
       "time": 123,
       "genre": [ "Action" ],
       "source": [ "Comic" ],
@@ -190,11 +157,8 @@
     {
       "title": "Chicken Little",
       "domestic": 135.4,
-      "worldwide": 314.4,
+      "foreign": 179.0,
       "budget": 150,
-      "inflDomestic": 183.6,
-      "inflWorldwide": 381.8,
-      "inflBudget": 182,
       "time": 81,
       "genre": [ "Animation" ],
       "source": [ "Folk-tale" ],
@@ -207,11 +171,8 @@
     {
       "title": "Wedding Crashers",
       "domestic": 209.3,
-      "worldwide": 285.2,
+      "foreign": 75.9,
       "budget": 40,
-      "inflDomestic": 284,
-      "inflWorldwide": 346.2,
-      "inflBudget": 49,
       "time": 113,
       "genre": [ "Comedy" ],
       "source": [ "Original" ],
@@ -224,11 +185,8 @@
     {
       "title": "Robots",
       "domestic": 128.2,
-      "worldwide": 260.7,
+      "foreign": 132.5,
       "budget": 75,
-      "inflDomestic": 174,
-      "inflWorldwide": 316.5,
-      "inflBudget": 91,
       "time": 90,
       "genre": [ "Animation" ],
       "source": [ "Original" ],
@@ -241,11 +199,8 @@
     {
       "title": "Howl's Moving Castle",
       "domestic": 4.7,
-      "worldwide": 235.2,
+      "foreign": 230.5,
       "budget": 24,
-      "inflDomestic": 6.3,
-      "inflWorldwide": 285.5,
-      "inflBudget": 29,
       "time": 119,
       "genre": [ "Animation" ],
       "source": [ "Book" ],
@@ -258,11 +213,8 @@
     {
       "title": "Constantine",
       "domestic": 76,
-      "worldwide": 230.9,
+      "foreign": 154.9,
       "budget": 100,
-      "inflDomestic": 103.1,
-      "inflWorldwide": 280.3,
-      "inflBudget": 121,
       "time": 121,
       "genre": [ "Horror" ],
       "source": [ "Comic" ],
@@ -275,11 +227,8 @@
     {
       "title": "Flightplan",
       "domestic": 89.7,
-      "worldwide": 223.4,
+      "foreign": 133.7,
       "budget": 50,
-      "inflDomestic": 121.7,
-      "inflWorldwide": 271.2,
-      "inflBudget": 61,
       "time": 93,
       "genre": [ "Thriller" ],
       "source": [ "Original" ],
@@ -292,11 +241,8 @@
     {
       "title": "Kingdom of Heaven",
       "domestic": 47.4,
-      "worldwide": 211.7,
+      "foreign": 164.3,
       "budget": 130,
-      "inflDomestic": 64.3,
-      "inflWorldwide": 257,
-      "inflBudget": 158,
       "time": 145,
       "genre": [ "Historical" ],
       "source": [ "Original" ],
@@ -309,11 +255,8 @@
     {
       "title": "Fun with Dick and Jane",
       "domestic": 110.3,
-      "worldwide": 202,
+      "foreign": 91.7,
       "budget": 100,
-      "inflDomestic": 147.8,
-      "inflWorldwide": 245.2,
-      "inflBudget": 121,
       "time": 90,
       "genre": [ "Comedy" ],
       "source": [ "Remake" ],
@@ -326,11 +269,8 @@
     {
       "title": "The Pacifier",
       "domestic": 113.1,
-      "worldwide": 198.6,
+      "foreign": 85.6,
       "budget": 56,
-      "inflDomestic": 153.5,
-      "inflWorldwide": 241.2,
-      "inflBudget": 68,
       "time": 91,
       "genre": [ "Comedy" ],
       "source": [ "Original" ],
@@ -343,11 +283,8 @@
     {
       "title": "Wallace and Gromit: The Curse of the Were-Rabbit",
       "domestic": 56.1,
-      "worldwide": 192.6,
+      "foreign": 136.5,
       "budget": 30,
-      "inflDomestic": 76.1,
-      "inflWorldwide": 233.9,
-      "inflBudget": 36,
       "time": 85,
       "genre": [ "Animation" ],
       "source": [ "Short Film" ],
@@ -360,11 +297,8 @@
     {
       "title": "The Longest Yard",
       "domestic": 158.1,
-      "worldwide": 190.3,
+      "foreign": 32.2,
       "budget": 82,
-      "inflDomestic": 214.6,
-      "inflWorldwide": 231.1,
-      "inflBudget": 100,
       "time": 109,
       "genre": [ "Comedy" ],
       "source": [ "Remake" ],
@@ -377,11 +311,8 @@
     {
       "title": "Walk the Line",
       "domestic": 119.5,
-      "worldwide": 186.4,
+      "foreign": 66.9,
       "budget": 28,
-      "inflDomestic": 161.3,
-      "inflWorldwide": 226.4,
-      "inflBudget": 34,
       "time": 135,
       "genre": [ "Biographical" ],
       "source": [ "Book" ],
@@ -394,11 +325,8 @@
     {
       "title": "Brokeback Mountain",
       "domestic": 83.0,
-      "worldwide": 178,
+      "foreign": 95.0,
       "budget": 14,
-      "inflDomestic": 110.6,
-      "inflWorldwide": 216.2,
-      "inflBudget": 17,
       "time": 135,
       "genre": [ "Western" ],
       "source": [ "Short Story" ],
@@ -411,11 +339,8 @@
     {
       "title": "The 40-Year-Old Virgin",
       "domestic": 109.4,
-      "worldwide": 177.4,
+      "foreign": 57.9,
       "budget": 26,
-      "inflDomestic": 148.6,
-      "inflWorldwide": 215.4,
-      "inflBudget": 32,
       "time": 116,
       "genre": [ "Comedy" ],
       "source": [ "Original" ],
@@ -426,12 +351,11 @@
       "rating": "R"
     }
   ],
-
-  "fifteen": [
+  "2015": [
     {
       "title": "Jurassic World",
       "domestic": 652.3,
-      "worldwide": 1670,
+      "foreign": 1016.7,
       "budget": 150,
       "time": 124,
       "genre": [ "Sci-Fi" ],
@@ -445,7 +369,7 @@
     {
       "title": "Furious 7",
       "domestic": 353.0,
-      "worldwide": 1516,
+      "foreign": 1162.0,
       "budget": 190,
       "time": 137,
       "genre": [ "Action" ],
@@ -459,7 +383,7 @@
     {
       "title": "Avengers: Age of Ultron",
       "domestic": 459.0,
-      "worldwide": 1405,
+      "foreign": 946.0,
       "budget": 250,
       "time": 141,
       "genre": [ "Action" ],
@@ -473,7 +397,7 @@
     {
       "title": "Minions",
       "domestic": 336.0,
-      "worldwide": 1159,
+      "foreign": 821.2,
       "budget": 74,
       "time": 91,
       "genre": [ "Animation" ],
@@ -486,8 +410,8 @@
     },
     {
       "title": "Star Wars: The Force Awakens",
-      "domestic": 933.8,
-      "worldwide": 2062,
+      "domestic": 544.6,
+      "foreign": 546.0,
       "budget": 200,
       "time": 136,
       "genre": [ "Fantasy" ],
@@ -501,7 +425,7 @@
     {
       "title": "Inside Out",
       "domestic": 356.5,
-      "worldwide": 856.8,
+      "foreign": 495.2,
       "budget": 175,
       "time": 94,
       "genre": [ "Animation" ],
@@ -514,8 +438,8 @@
     },
     {
       "title": "Spectre",
-      "domestic": 200,
-      "worldwide": 880.7,
+      "domestic": 196.2,
+      "foreign": 653.9,
       "budget": 245,
       "time": 148,
       "genre": [ "Action" ],
@@ -529,7 +453,7 @@
     {
       "title": "Mission: Impossible - Rogue Nation",
       "domestic": 195.0,
-      "worldwide": 682.3,
+      "foreign": 487.3,
       "budget": 150,
       "time": 130,
       "genre": [ "Action" ],
@@ -542,8 +466,8 @@
     },
     {
       "title": "The Hunger Games: Mockingjay - Part 2",
-      "domestic": 281.7,
-      "worldwide": 653,
+      "domestic": 264.6,
+      "foreign": 352.2,
       "budget": 160,
       "time": 137,
       "genre": [ "Action" ],
@@ -556,8 +480,8 @@
     },
     {
       "title": "The Martian",
-      "domestic": 228.4,
-      "worldwide": 629.3,
+      "domestic": 224.9,
+      "foreign": 369.1,
       "budget": 108,
       "time": 141,
       "genre": [ "Sci-Fi" ],
@@ -571,7 +495,7 @@
     {
       "title": "Fifty Shades of Grey",
       "domestic": 166.2,
-      "worldwide": 571,
+      "foreign": 404.3,
       "budget": 40,
       "time": 125,
       "genre": [ "Romance" ],
@@ -585,7 +509,7 @@
     {
       "title": "Cinderella",
       "domestic": 201.2,
-      "worldwide": 542.7,
+      "foreign": 341.5,
       "budget": 95,
       "time": 118,
       "genre": [ "Fantasy" ],
@@ -599,7 +523,7 @@
     {
       "title": "Ant Man",
       "domestic": 180.2,
-      "worldwide": 519.3,
+      "foreign": 338.4,
       "budget": 130,
       "time": 117,
       "genre": [ "Action" ],
@@ -613,7 +537,7 @@
     {
       "title": "San Andreas",
       "domestic": 155.2,
-      "worldwide": 473.8,
+      "foreign": 318.6,
       "budget": 110,
       "time": 114,
       "genre": [ "Action" ],
@@ -626,8 +550,8 @@
     },
     {
       "title": "Hotel Transylvania 2",
-      "domestic": 169.7,
-      "worldwide": 469.4,
+      "domestic": 167.8,
+      "foreign": 288.2,
       "budget": 80,
       "time": 89,
       "genre": [ "Animation" ],
@@ -641,7 +565,7 @@
     {
       "title": "Terminator: Genisys",
       "domestic": 89.8,
-      "worldwide": 440.6,
+      "foreign": 350.8,
       "budget": 155,
       "time": 126,
       "genre": [ "Action" ],
@@ -655,7 +579,7 @@
     {
       "title": "Kingsman: The Secret Service",
       "domestic": 128.3,
-      "worldwide": 414.4,
+      "foreign": 286.1,
       "budget": 81,
       "time": 129,
       "genre": [ "Action" ],
@@ -669,7 +593,7 @@
     {
       "title": "Home",
       "domestic": 177.4,
-      "worldwide": 386,
+      "foreign": 208.6,
       "budget": 135,
       "time": 94,
       "genre": [ "Animation" ],
@@ -683,7 +607,7 @@
     {
       "title": "Mad Max: Fury Road",
       "domestic": 153.6,
-      "worldwide": 377.8,
+      "foreign": 222.2,
       "budget": 150,
       "time": 120,
       "genre": [ "Sci-Fi" ],
@@ -697,7 +621,7 @@
     {
       "title": "Taken 3",
       "domestic": 89.3,
-      "worldwide": 326.5,
+      "foreign": 237.2,
       "budget": 48,
       "time": 109,
       "genre": [ "Action" ],
@@ -711,7 +635,7 @@
     {
       "title": "The SpongeBob Movie: Sponge Out of Water",
       "domestic": 163.0,
-      "worldwide": 323.4,
+      "foreign": 160.4,
       "budget": 74,
       "time": 93,
       "genre": [ "Animation" ],
@@ -725,7 +649,7 @@
     {
       "title": "Maze Runner: The Scorch Trials",
       "domestic": 81.6,
-      "worldwide": 312.3,
+      "foreign": 230.6,
       "budget": 61,
       "time": 131,
       "genre": [ "Action" ],
@@ -739,7 +663,7 @@
     {
       "title": "The Divergent Series: Insurgent",
       "domestic": 130.2,
-      "worldwide": 297.3,
+      "foreign": 167.1,
       "budget": 110,
       "time": 119,
       "genre": [ "Sci-Fi" ],
@@ -751,32 +675,32 @@
       "rating": "PG-13"
     },
     {
-      "title": "The Good Dinosaur",
-      "domestic": 123,
-      "worldwide": 325.4,
-      "budget": 200,
-      "time": 93,
-      "genre": [ "Animation", "Comedy" ],
-      "source": [ "Original" ],
+      "title": "Pitch Perfect 2",
+      "domestic": 184.3,
+      "foreign": 102.8,
+      "budget": 29,
+      "time": 115,
+      "genre": [ "Comedy" ],
+      "source": [ "Sequel" ],
       "oscars": {
         "nominations": 0,
         "wins": 0
       },
-      "rating": "PG"
+      "rating": "PG-13"
     },
     {
-      "title": "The Revenant",
-      "domestic": 182.1,
-      "worldwide": 506.1,
-      "budget": 135,
-      "time": 156,
-      "genre": [ "Historical", "Drama" ],
+      "title": "Paddington",
+      "domestic": 76.2,
+      "foreign": 183.3,
+      "budget": 55,
+      "time": 95,
+      "genre": [ "Animation" ],
       "source": [ "Book" ],
       "oscars": {
         "nominations": 0,
         "wins": 0
       },
-      "rating": "R"
+      "rating": "PG"
     }
   ]
 }
