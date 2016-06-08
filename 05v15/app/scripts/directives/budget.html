@@ -1,10 +1,22 @@
-﻿<section id="budget">
-    The most expensive movie of 2005 was {{highestBudget05.title}} costing {{highestBudget05.gross}}
-    and the most expensive movie of 2015 was {{highestGross15.title}} costing {{highestBudget15.gross}}.
-    <br />
-    The total budget of the top 25 grossing movies of 2005 was {{totalBudget05}} and the total budget of
-    the top 25 grossing movies of 2015 was {{totalBudget15}}.
-    <div class="chart">
-        <svg style="width: 100%; height: 250px; /*border: 2px solid black;*/ margin: 15px 0"></svg>
+﻿<header>
+    <h2>Budget</h2>
+    <p>
+        The top 25 grossing films of 2015 cost {{budgetDifference}} more to produce but had a higher return on investment ({{roi15}})
+        than 2005 ({{roi05}}).
+    </p>
+</header>
+<div id="budget">
+    <div id="highest-budget" class="flex-parent">
+        <h4>Highest Budget</h4>
+        <div id="05-budget" class="left"><p><span class="budget-year years">2005<br /></span><span class="budget-title titles">{{highestBudget05.title}}<br /></span> <span class="budget-gross gross">{{highestBudget05.gross}}</span></p></div>
+        <div id="15-budget" class="right"><p><span class="budget-year years">2015<br /></span><span class="budget-title titles">{{highestBudget15.title}}<br /></span> <span class="budget-gross gross">{{highestBudget15.gross}}</span></p></div>
     </div>
-</section>
+    <div id="total-budget" class="flex-parent">
+        <h4>Total Budget</h4>
+        <div id="05-total-budget" class="left"><p><span class="budget-year years">2005<br /></span><span class="budget-total total gross">{{totalBudget05}}</span></p></div>
+        <div id="15-total-budget" class="right"><p><span class="budget-year years">2015<br /></span><span class="budget-total total gross">{{totalBudget15}}</span></p></div>
+    </div>
+    <div class="chart">
+        <svg viewBox="0 0 840 200" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+</div>

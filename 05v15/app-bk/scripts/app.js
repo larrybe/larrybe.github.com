@@ -34,7 +34,7 @@ angular
     .factory('currencyFormat', ['$filter', function ($filter) {
         return function (amount) {
             if (amount === 0) {
-                return $filter('currency')(amount, '$', 0)
+                return 0;
             }
             if (Math.floor(amount).toString().length < 4) {
                 if (amount % 1 === 0) {
@@ -63,20 +63,6 @@ angular
             }
         }
     })
-    .factory('getRoi', ['$filter', 'getTotal', function ($filter, getTotal) {
-        return function (array) {
-            var totalBudget = 0, totalGross = 0;
-            if (array[0]['worldwide']['actual']) {
-                totalBudget = getTotal(array, 'budget', 'actual');
-                totalGross = getTotal(array, 'worldwide', 'actual');
-            } else {
-                totalBudget = getTotal(array, 'budget');
-                totalGross = getTotal(array, 'worldwide');
-            }
-            var roi = ((totalGross - totalBudget) / totalBudget) * 100;
-            return $filter('number')(roi, 0) + '%';
-        }
-    }])
     .factory('timeFormat', function () {
         return function (timeInMinutes) {
             if (timeInMinutes % 60 === 0) {
@@ -177,18 +163,6 @@ angular
             return titles.join(", ")
         }
     })
-    .factory('reviews', function () {
-        return function (array) {
-
-        }
-    })
-    .factory('classed', function () {
-        return function (str) {
-            var string = str;
-            string = string.replace(/\s+/g, '-').toLowerCase();
-            return string;
-        }
-    })
     .factory('makeGrossingChart', ['currencyFormat', 'getTotal', function (currencyFormat, getTotal) {
         return function (year, select, idName, color, offsetY, data, domain, range, propertyName, optProperty) {
             var ramp = d3.scale.linear().domain(domain).range(range);
@@ -196,8 +170,8 @@ angular
             var total = currencyFormat(getTotal(data, propertyName));
             var svg = d3.select(select);
 
-            var g = svg.append('g')
-                .attr('id', idName);
+                var g = svg.append('g')
+                    .attr('id', idName);
 
             var year = g.append('g')
                     .append('text')
@@ -222,11 +196,11 @@ angular
                         return d['title']
                     });
             function totalTickLine() {
-                return d3.select('#' + idName)
+                return d3.select('#'+idName)
                          .append('g')
                          .attr('x', 0)
                          .attr('y', 0)
-                         .attr('id', idName + "-total-tick")
+                         .attr('id', idName + "-total-tick")                                        
                          .append('line')
                          .attr('x1', 0)
                          .attr('y1', 0)
@@ -241,6 +215,7 @@ angular
                             .append('text')
                             .attr('id', idName + '-total-amount')
                             .attr('width', '50px')
+                            .attr('x', '-95')
                             .attr('y', '45')
 
             }
@@ -256,7 +231,7 @@ angular
                             var y = that.attr('y');
                             var positionX = parseFloat(that.attr('width')) + parseFloat(offsetX);
                             var totalTick = totalTickLine();
-                            var totalTickAmount = totalAmount()
+                            var totalTickAmount = totalAmount();
                         }
                     })
             } else {
@@ -273,11 +248,8 @@ angular
                             var that = d3.select(this);
                             var positionX = parseFloat(that.attr('width')) + parseFloat(offsetX);
                             var totalTick = totalTickLine()
-                            d3.select('#' + idName + '-total-tick').attr('transform', 'translate(' + positionX + ', ' + offsetY + ')')
-                            var totalTickAmount = totalAmount().text(total)
-                                .attr('x', function () {
-                                    return -(this.getBBox().width + 3)
-                                });
+                            d3.select('#'+idName+'-total-tick').attr('transform', 'translate(' + positionX + ', ' + offsetY + ')')
+                            var totalTickAmount = totalAmount().text(total);                                         
                         }
                     })
             }
@@ -311,7 +283,7 @@ angular
                         .attr('x', 0)
                         .attr('y', -25)
                         .text(that.attr('data-title'))
-                        .attr('dx', function () {
+                        .attr('dx', function () {                           
                             if (this.getBBox().width + x > svgWidth) {
                                 dx = -that.attr('data-title').length / .14;
                             } else {
@@ -362,7 +334,7 @@ angular
             var positionX = 0;
             var positionY = 0;
             var total = currencyFormat(getTotal(data, propertyName, optProperty));
-            var svg = d3.select('#' + select)
+            var svg = d3.select('#'+ select)
                     .selectAll('rect')
                     .data(data)
                     .transition()
@@ -381,141 +353,47 @@ angular
                             var that = d3.select(this);
                             positionY = that.attr('y');
                             positionX = parseFloat(that.attr('width')) + parseFloat(offsetX);
-                        }
+                                }
                     })
             var totalTick = d3.select('#' + select + '-total-tick')
                         .transition()
                         .duration(200)
                         .ease("ease-out")
                         .attr('transform', 'translate(' + positionX + ', ' + positionY + ')');
-            var tickAmount = d3.select('#' + select + '-total-amount')
+            var tickAmount = d3.select('#'+select+'-total-amount')
                         .text(total)
-                        .attr('x', function () {
-                            return -(this.getBBox().width + 3)
-                        });
         }
     }])
-    .factory('freshOrRotten', function () {
-        return function (score) {
-            if (score >= 60) {
-                return 'fresh';
-            } else {
-                return 'rotten';
-            }
-        }
-    })
-    .factory('drawStars', function () {
-        return function (select, stars) {
-            var fullStarsNum = Math.floor(stars);
-            var halfStarsNum = Math.ceil(stars % 1);
-            var fullStarImg = "../../images/star.svg";
-            var halfStarImg = "../../images/half-star.svg";
-            var offsetX = 0;
-            var width = 25;
-            var svgElemWidth = width * Math.ceil(stars);
-            var height = 25;
-
-            var svg = d3.select('#' + select + ' svg')
-                        .attr('shape-rendering', 'optimizeQuality')
-                        .attr('style', 'width:' + svgElemWidth + 'px');
-
-            function starsLoop(i, imgUrl) {
-                for (var index = 0; index < i; index++) {
-                    svg.append('svg:image')
-                    .attr('xlink:href', imgUrl)
-                    .attr('shape-rendering', 'optimizeQuality')
-                    .attr('x', offsetX)
-                    .attr('y', 0)
-                    .attr('width', width)
-                    .attr('height', height);
-                    offsetX += 25;
-                }
-            }
-
-            function reviewStars(i, j) {
-                if (i) {
-                    starsLoop(i, fullStarImg);
-                }
-                if (j) {
-                    starsLoop(j, halfStarImg);
-                }
-            }
-
-            reviewStars(fullStarsNum, halfStarsNum);
-
-        }
-    })
-    .factory('sticky', [function () {
-        return function (section) {
-            var sectionId = '#' + section;
-            var sectionHeader = section + ' header';
-            var currentOffset = $(sectionHeader).offset().top;
-            var cssTop = parseFloat($(sectionHeader).css('top'));
-            $(window).scroll(function () {
-                if (!window.matchMedia('(max-width: 720px)').matches) {
-                    var scrollPosition = $(window).scrollTop() - $(sectionId).offset().top;
-                    if (scrollPosition <= 0) {
-                        //$(sectionHeader).offset({ top: currentOffset });
-                        $(sectionHeader).css('top', 0);
-                    } else {
-                        if ($(sectionHeader).height() + 20 > $(sectionId).height() - scrollPosition) {
-                            //$(sectionHeader).offset({ top: $(sectionId).offset().top + $(sectionId).height() - $(sectionHeader).height() });
-                            $(sectionHeader).css('top', parseFloat($(sectionId).css('top')) + $(sectionId).height() - $(sectionHeader).height());
-                        } else {
-                            //$(sectionHeader).offset({ top: scrollPosition + currentOffset });
-                            $(sectionHeader).css('top', scrollPosition + cssTop);
-                        }
-                    }
-                } else {
-                    return;
-                }
-            });
-            $(window).resize(function () {
-                if (window.matchMedia('(max-width: 720px)').matches) {
-                    $(sectionHeader).css('top', 0);
-                }
-
-            })
-        }
-    }])
-    .directive('grossing', ['filmsList', 'sortFilms', 'currencyFormat', 'getTotal', 'makeGrossingChart', 'updateGrossingChart', 'sticky', function (filmsList, sortFilms, currencyFormat, getTotal, makeGrossingChart, updateGrossingChart, sticky) {
+    .directive('grossing', ['filmsList', 'sortFilms', 'currencyFormat', 'getTotal', 'makeGrossingChart', 'updateGrossingChart', function (filmsList, sortFilms, currencyFormat, getTotal, makeGrossingChart, updateGrossingChart) {
         return {
             restrict: 'E',
-            templateUrl: '/scripts/directives/grossing.html',
+            templateUrl: '/scripts/directives/highestgrossing.html',
             controller: function ($scope) {
                 $scope.adjusted = 'false';
                 filmsList.then(function (data) {
                     $scope.films = data.data;
                     var sortedGross05 = sortFilms($scope.films.five, 'worldwide.actual');
                     var sortedGross15 = sortFilms($scope.films.fifteen, 'worldwide');
-                    var totalGross15 = getTotal(sortedGross15, 'worldwide');
                     $scope.highestGross15 = { title: sortedGross15[0].title, gross: currencyFormat(sortedGross15[0].worldwide) };
-                    $scope.totalGross15 = currencyFormat(totalGross15);
-                    $scope.revenueUS05 = (getTotal(sortedGross05, 'domestic', 'actual') /getTotal(sortedGross05, 'worldwide', 'actual'))*100;
-                    $scope.revenueUS15 = (getTotal(sortedGross15, 'domestic') / getTotal(sortedGross15, 'worldwide'))*100;
-                    makeGrossingChart('2015', '#grossing .chart svg', 'grossing15', [77, 188, 233], 140, sortedGross15, [170, 2100], [1, 110], 'worldwide');
-                    makeGrossingChart('2005', '#grossing .chart svg', 'grossing05', [252, 157, 154], 40, sortedGross05, [170, 2100], [1, 110], 'worldwide', 'actual');
+                    $scope.totalGross15 = currencyFormat(getTotal(sortedGross15, 'worldwide'));
+                    makeGrossingChart('2015', '#total-gross .chart svg', 'grossing15', [77, 188, 233], 40, sortedGross15, [170, 2100], [1, 90], 'worldwide');
+                    makeGrossingChart('2005', '#total-gross .chart svg', 'grossing05', [252, 157, 154], 140, sortedGross05, [170, 2100], [1, 90], 'worldwide', 'actual');
                     $scope.$watch('adjusted', function () {
                         if ($scope.adjusted === 'false') {
                             $scope.highestGross05 = { title: sortedGross05[0].title, gross: currencyFormat(sortedGross05[0].worldwide.actual) };
                             $scope.totalGross05 = currencyFormat(getTotal(sortedGross05, 'worldwide', 'actual'));
-                            $scope.grossingDifference = currencyFormat(getTotal(sortedGross15, 'worldwide') - getTotal(sortedGross05, 'worldwide', 'actual'));
-                            $scope.percentIncrease = ((getTotal(sortedGross15, 'worldwide') - getTotal(sortedGross05, 'worldwide', 'actual')) / getTotal(sortedGross05, 'worldwide', 'actual')) * 100;
-                            updateGrossingChart('grossing05', sortedGross05, [170, 2100], [1, 110], 'worldwide', 'actual');
+                            updateGrossingChart('grossing05', sortedGross05, [170, 2100], [1, 90], 'worldwide', 'actual');
                         } else {
                             $scope.highestGross05 = { title: sortedGross05[0].title, gross: currencyFormat(sortedGross05[0].worldwide.adjusted) };
                             $scope.totalGross05 = currencyFormat(getTotal(sortedGross05, 'worldwide', 'adjusted'));
-                            $scope.grossingDifference = currencyFormat(getTotal(sortedGross15, 'worldwide') - getTotal(sortedGross05, 'worldwide', 'adjusted'));
-                            $scope.percentIncrease = ((getTotal(sortedGross15, 'worldwide') - getTotal(sortedGross05, 'worldwide', 'adjusted')) / getTotal(sortedGross05, 'worldwide', 'adjusted')) * 100;
-                            updateGrossingChart('grossing05', sortedGross05, [170, 2100], [1, 110], 'worldwide', 'adjusted');
+                            updateGrossingChart('grossing05', sortedGross05, [170, 2100], [1, 90], 'worldwide', 'adjusted');
                         }
                     });
-                    sticky('grossing');
                 });
             }
         }
     }])
-.directive('budget', ['filmsList', 'sortFilms', 'currencyFormat', 'getTotal', 'makeGrossingChart', 'updateGrossingChart', 'getRoi', 'sticky', function (filmsList, sortFilms, currencyFormat, getTotal, makeGrossingChart, updateGrossingChart, getRoi, sticky) {
+.directive('budget', ['filmsList', 'sortFilms', 'currencyFormat', 'getTotal', 'makeGrossingChart', 'updateGrossingChart', function (filmsList, sortFilms, currencyFormat, getTotal, makeGrossingChart, updateGrossingChart) {
     return {
         restrict: 'E',
         templateUrl: '/scripts/directives/budget.html',
@@ -526,29 +404,24 @@ angular
                 var sortedBudget15 = sortFilms($scope.films.fifteen, 'budget');
                 $scope.highestBudget15 = { title: sortedBudget15[0].title, gross: currencyFormat(sortedBudget15[0].budget) };
                 $scope.totalBudget15 = currencyFormat(getTotal(sortedBudget15, 'budget'));
-                $scope.roi05 = getRoi(sortedBudget05);
-                $scope.roi15 = getRoi(sortedBudget15);
-                makeGrossingChart('2015', '#budget .chart svg', 'budget15', [77, 188, 233], 140, sortedBudget15, [10, 600], [1, 150], 'budget');
-                makeGrossingChart('2005', '#budget .chart svg', 'budget05', [252, 157, 154], 40, sortedBudget05, [10, 600], [1, 150], 'budget', 'actual');
+                makeGrossingChart('2015', '#budget .chart svg', 'budget15', [77, 188, 233], 40, sortedBudget15, [10, 600], [1, 120], 'budget');
+                makeGrossingChart('2005', '#budget .chart svg', 'budget05', [252, 157, 154], 140, sortedBudget05, [10, 600], [1, 120], 'budget', 'actual');
                 $scope.$watch('adjusted', function () {
                     if ($scope.adjusted === 'false') {
                         $scope.highestBudget05 = { title: sortedBudget05[0].title, gross: currencyFormat(sortedBudget05[0].budget.actual) };
                         $scope.totalBudget05 = currencyFormat(getTotal(sortedBudget05, 'budget', 'actual'));
-                        $scope.budgetDifference = currencyFormat((getTotal(sortedBudget15, 'budget') - getTotal(sortedBudget05, 'budget', 'actual')))
-                        updateGrossingChart('budget05', sortedBudget05, [10, 600], [1, 150], 'budget', 'actual');
+                        updateGrossingChart('budget05', sortedBudget05, [10, 600], [1, 120], 'budget', 'actual');
                     } else {
                         $scope.highestBudget05 = { title: sortedBudget05[0].title, gross: currencyFormat(sortedBudget05[0].budget.adjusted) };
                         $scope.totalBudget05 = currencyFormat(getTotal(sortedBudget05, 'budget', 'adjusted'));
-                        $scope.budgetDifference = currencyFormat((getTotal(sortedBudget15, 'budget') - getTotal(sortedBudget05, 'budget', 'adjusted')))
-                        updateGrossingChart('budget05', sortedBudget05, [10, 600], [1, 150], 'budget', 'adjusted');
+                        updateGrossingChart('budget05', sortedBudget05, [10, 600], [1, 120], 'budget', 'adjusted');
                     }
                 })
-                sticky('budget')
             });
         }
     }
 }])
-.directive('time', ['filmsList', 'sortFilms', 'timeFormat', 'getTotal', '$filter', 'sticky', function (filmsList, sortFilms, timeFormat, getTotal, $filter, sticky) {
+.directive('time', ['filmsList', 'sortFilms', 'timeFormat', 'getTotal', function (filmsList, sortFilms, timeFormat, getTotal) {
     return {
         restrict: 'E',
         templateUrl: 'scripts/directives/time.html',
@@ -557,20 +430,15 @@ angular
                 $scope.films = data.data;
                 var sortedTime05 = sortFilms($scope.films.five, 'time');
                 var sortedTime15 = sortFilms($scope.films.fifteen, 'time');
-                var total05 = getTotal(sortedTime05, 'time');
-                var total15 = getTotal(sortedTime15, 'time')
                 $scope.longestFilm05 = { title: sortedTime05[0].title, time: timeFormat(sortedTime05[0].time) };
                 $scope.longestFilm15 = { title: sortedTime15[0].title, time: timeFormat(sortedTime15[0].time) };
-                $scope.averageTime05 = timeFormat($filter('number')(total05 / 25, 0));
-                $scope.averageTime15 = timeFormat($filter('number')(total15 / 25, 0));
-                $scope.totalTime05 = timeFormat(total05);
-                $scope.totalTime15 = timeFormat(total15);
-                sticky('time')
+                $scope.totalTime05 = timeFormat(getTotal(sortedTime05, 'time'));
+                $scope.totalTime15 = timeFormat(getTotal(sortedTime15, 'time'));
             })
         }
     }
 }])
-.directive('genre', ['filmsList', 'groupGenres', 'genreLength', 'genreGross', 'currencyFormat', 'classed', 'sticky', function (filmsList, groupGenres, genreLength, genreGross, currencyFormat, classed, sticky) {
+.directive('genre', ['filmsList', 'groupGenres', 'genreLength', 'genreGross', 'currencyFormat', function (filmsList, groupGenres, genreLength, genreGross, currencyFormat) {
     return {
         restrict: 'E',
         templateUrl: 'scripts/directives/genre.html',
@@ -583,12 +451,11 @@ angular
                 $scope.genreLength = genreLength;
                 $scope.genreGross = genreGross;
                 $scope.currencyFormat = currencyFormat;
-                sticky('genre')
             })
         }
     }
 }])
-.directive('sources', ['filmsList', 'groupSources', 'genreLength', 'genreGross', 'sourceTitles', 'classed', 'sticky', function (filmsList, groupSources, genreLength, genreGross, sourceTitles, classed, sticky) {
+.directive('sources', ['filmsList', 'groupSources', 'genreLength', 'genreGross', 'sourceTitles', function (filmsList, groupSources, genreLength, genreGross, sourceTitles) {
     return {
         restrict: 'E',
         templateUrl: 'scripts/directives/sources.html',
@@ -601,40 +468,18 @@ angular
                 $scope.sourceGross = genreGross;
                 $scope.sourceLength = genreLength;
                 $scope.sourceTitles = sourceTitles;
-                $scope.classed = classed;
-                sticky('sources')
             })
         }
     }
 }])
-.directive('reviews', ['filmsList', 'sortFilms', 'currencyFormat', 'freshOrRotten', 'drawStars', 'getTotal', 'sticky', function (filmsList, sortFilms, currencyFormat, freshOrRotten, drawStars, getTotal, sticky) {
+.directive('reviews', ['filmsList', function (filmsList) {
     return {
         restrict: 'E',
         templateUrl: 'scripts/directives/reviews.html',
         controller: function ($scope) {
             filmsList.then(function (data) {
                 $scope.films = data.data;
-                $scope.currencyFormat;
-                $scope.reviews05 = sortFilms($scope.films.five, 'worldwide.actual');
-                $scope.reviews15 = sortFilms($scope.films.fifteen, 'worldwide');
-                $scope.averageRT05 = (getTotal($scope.reviews05, 'reviews', 'rt') / 25);
-                $scope.averageRT15 = (getTotal($scope.reviews15, 'reviews', 'rt') / 25);
-                $scope.totalRE05 = (getTotal($scope.reviews05, 'reviews', 're'));
-                $scope.totalRE15 = (getTotal($scope.reviews15, 'reviews', 're'));
-                $scope.fresh = freshOrRotten;
-                $scope.drawStars = drawStars;
-                sticky('reviews')
-            })
-        }
-    }
-}])
-.directive('awards', ['filmsList', 'sortFilms', 'sticky', function (filmsList, sortFilms, sticky) {
-    return {
-        restrict: 'E',
-        templateUrl: 'scripts/directives/awards.html',
-        controller: function ($scope) {
-            filmsList.then(function (data) {
-                sticky('awards')
+                $scope.reviewSite = 'rottentomatoes';
             })
         }
     }

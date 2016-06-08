@@ -1,21 +1,66 @@
-﻿<h2>Reviews</h2>
-<div id="review-site">
-    <input type="radio" name="site" value="rottentomatoes" id="rottentomatoes" ng-model="reviewSite" />
-    <label for="rottentomatoes">rottentomatoes.com</label>
-    <input type="radio" name="site" value="rogerebert" id="rogerebert" ng-model="reviewSite" />
-    <label for="rogerebert">rogerebert.com</label>
-</div>
-<div id="rottentomatoes-reviews" ng-if="reviewSite==='rottentomatoes'">
-    <p>Rotten Tomatoes is a review website that rates movies on a scale of 0-100%.</p>
+﻿<header>
+    <h2>Reviews</h2>
     <p>
-        75-100% for Certified Fresh<br />
-        74-60% for Fresh<br />
-        0-59% for Rotten
+        Rotten Tomatoes is a review website that rates films on a scale of 0-100%.
+        Films scoring 60-100% are considered Fresh, and 0-59% are considered Rotten.<br />
+        Roger Ebert rates films on a scale of up to 4 stars, with
+        4 stars being the best score a film could get.
     </p>
-</div>
-<div id="rottentomatoes-reviews" ng-if="reviewSite==='rogerebert'">
     <p>
-        rogerebert.com is a review website that rates movies on a scale of 1-4 stars, with
-        1 star being the lowest rating a film could get and 4 stars being the highest.
+        Rotten Tomatoes was more favorable to the films of 2015, whereas, Roger Ebert gave more stars to
+        the films of 2005.
     </p>
+</header>
+
+<div id="reviews">
+    <div id="reviews-2005">
+        <h3>2005</h3>
+        <div ng-repeat="review in reviews05" class="film-reviews reviews-05" id="review05-{{$index}}">
+            <div class="review-score">
+                <p class="rt-score {{fresh(review.reviews.rt)}}">{{review.reviews.rt}}%</p>
+                <p class="re-score"><svg></svg></p>
+            </div>
+            <p class="review-title titles">{{review.title}}</p>
+            <p class="review-gross gross">{{currencyFormat(review.worldwide.actual)}}</p>
+            {{drawStars(("review05-")+$index, review.reviews.re)}}
+        </div>
+        <div class="film-reviews reviews-05" id="review05-rt-average">
+            <p class="review-score">
+                <span class="rt-score rt-average {{fresh(averageRT05)}}">{{averageRT05}}%</span>
+            </p>
+            <p class="review-title titles">Rotten Tomatoes Average</p>
+        </div>
+        <div class="film-reviews reviews-05" id="review05-re-total">
+            <p class="review-score">
+                <span class="re-score re-average">{{totalRE05}}/100<svg></svg>s</span>
+            </p>
+            {{drawStars(("review05-re-total"), 1)}}
+            <p class="review-title titles">Roger Ebert Total Stars</p>
+        </div>
+    </div>
+    <div id="reviews-2015">
+        <h3>2015</h3>
+        <div ng-repeat="review in reviews15" class="film-reviews reviews-15" id="review15-{{$index}}">
+            <div class="review-score">
+                <p class="rt-score {{fresh(review.reviews.rt)}}">{{review.reviews.rt}}%</p>
+                <p class="re-score"><svg></svg></p>
+            </div>
+            <p class="review-title titles">{{review.title}}</p>
+            <p class="review-gross gross">{{currencyFormat(review.worldwide)}}</p>
+            {{drawStars(("review15-")+$index, review.reviews.re)}}
+        </div>
+        <div class="film-reviews reviews-15" id="review15-rt-average">
+            <p class="review-score">
+                <span class="rt-score rt-average {{fresh(averageRT15)}}">{{averageRT15}}%</span>
+            </p>
+            <p class="review-title titles">Rotten Tomatoes Average</p>
+        </div>
+        <div class="film-reviews reviews-15" id="review15-re-total">
+            <p class="review-score">
+                <span class="re-score re-average">{{totalRE15}}/100<svg></svg>s</span>
+            </p>
+            <p class="review-title titles">Roger Ebert Total Stars</p>
+            {{drawStars(("review15-re-total"), 1)}}
+        </div>
+    </div>
 </div>

@@ -1,8 +1,8 @@
 ﻿<!doctype html>
-<html ng-app="515App" lang="en-us">
-<head>
+<html class="no-js" ng-app="515App">
+  <head>
     <meta charset="utf-8">
-    <title>0515 | A comparison of the top 25 grossing films of 2005 and 2015.</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -11,37 +11,44 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+      <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-</head>
-<body>
+  </head>
+  <body >
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
     <div class="container">
-        <header class="main-header">
-            <h1>0515</h1>
-            <p id="description">
-                A comparison of the top 25 grossing films of 2005 and 2015.
-                Exploring the changes in finance, content and reception of film over a 10 year period.
-            </p>
-            <p class="no-js"><span id="error">Error:</span> Javascript not enabled.</p>
-        </header>
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#/about">About</a></li>
+          <li><a ng-href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">515</h3>
+      </div>
 
-        <grossing class="category"></grossing>
-        <budget class="category"></budget>
-        <time class="category"></time>
-        <genre class="category"></genre>
-        <sources class="category"></sources>
-        <reviews class="category"></reviews>
-
-        <footer>
-            Financial information on films from <a href="http://www.boxofficemojo.com/">Box Office Mojo</a>.
-            Inflation calculated using the CPI Inflation Calculator on <a href="http://data.bls.gov/cgi-bin/cpicalc.pl">bls.gov</a>.
-            Information on time, genre and source material for films gathered from <a href="https://en.wikipedia.org">Wikipedia</a> and <a href="http://rottentomatoes.com">Rotten Tomatoes</a>.
-            Reviews sourced from <a href="http://rottentomatoes.com">Rotten Tomatoes</a> and <a href="http://rogerebert.com">Roger Ebert</a>.
-        </footer>
+      <section id="financials">
+         <grossing></grossing>
+          <budget></budget>
+      </section>
+        <section id="time">
+            <time></time>
+        </section>
+        <section id="genre">
+            <genre></genre>
+        </section>
+        <section id="sources">
+            <sources></sources>
+        </section>
+        <section id="reviews">
+            <reviews></reviews>
+        </section>
+      <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
     </div>
 
 
@@ -51,10 +58,12 @@
     <script src="bower_components/json3/lib/json3.js"></script>
     <![endif]-->
     <!-- endbuild -->
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
@@ -64,10 +73,10 @@
     <script src="bower_components/d3/d3.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <!--<script src="scripts/financials.js"></script>-->
-    <script src="scripts/nojs.js"></script>
-    <script src="scripts/app.js"></script>
-    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <!--<script src="scripts/financials.js"></script>-->
+        <script src="scripts/app.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
