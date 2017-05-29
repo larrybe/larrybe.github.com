@@ -1,0 +1,10 @@
+{
+"TOTAL_MEMORY": 134217728,
+"dataUrl": "paperplane.data.unityweb",
+"asmCodeUrl": "paperplane.asm.code.unityweb",
+"asmMemoryUrl": "paperplane.asm.memory.unityweb",
+"asmFrameworkUrl": "paperplane.asm.framework.unityweb",
+"backgroundUrl": "paperplane.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF"
+}
