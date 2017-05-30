@@ -30,7 +30,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var GetEventsService = (function () {
     function GetEventsService(http) {
         this.http = http;
-        this.EventsUrl = "./../events/assets/events.json";
+        this.EventsUrl = "./../assets/events.json";
     }
     GetEventsService.prototype.getEvents = function () {
         return this.http.get(this.EventsUrl)
@@ -691,8 +691,12 @@ var EventsListComponent = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
-    production: true
+    production: false
 };
 //# sourceMappingURL=/Users/brobbey/larry/webdev/events/src/environment.js.map
 
@@ -762,7 +766,7 @@ module.exports = "<router-outlet></router-outlet>"
 /***/ 518:
 /***/ (function(module, exports) {
 
-module.exports = "<canvas #bgcanvas id=\"bgcanvas\" width=\"1200\" height=\"600\"></canvas>\n\n<div #eventdetaildiv class=\"eventdetail\">\n\t<a routerLink=\"/\" routerLinkActive=\"active\" class=\"back\"><span>Back to</span> Cultural Events</a>\n\t<canvas #namecanvas id=\"namecanvas\" width=\"1600\" height=\"400\"></canvas>\n\t<div *ngIf=\"event\">\n\t\t<header>\n\t\t\t<div class=\"event-name\">\n\t\t\t\t<h1>{{event.shortName}}</h1>\n\t\t\t</div>\n\t\t</header>\n\n\t\t<div class=\"event-main\">\n\t\t\t<div class=\"event-row\" *ngFor=\"let desc of event.info.desc; let i = index\">\n\t\t\t\t<div class=\"event-image\">\n\t\t\t\t\t<img [src]=\"'../../assets/img/'+event.id+'/'+i+'.jpg'\" width=\"400px\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"event-brief\">\n\t\t\t\t\t<h3><span>{{desc[0]}}</span><br /><span>{{desc[1]}}</span></h3>\n\t\t\t\t\t<p>{{desc[2]}}</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"event-summary\">\n\t\t\t<p>{{event.name}}</p>\n\t\t\t<span *ngIf=\"event.info.website\"><a target=\"_blank\" rel=\"noopener noreferrer\" [href]=event.info.website>{{event.info.website}}</a></span>\n\t\t\t<p>\n\t\t\t\t<span *ngIf=\"event.location.venue\">{{event.location.venue}}, </span>\n\t\t\t\t<span *ngIf=\"event.location.city\">{{event.location.city}}, </span>\n\t\t\t\t<span *ngIf=\"event.location.state\">{{event.location.state}}, </span> {{event.location.country}}\n\t\t\t</p>\n\t\t\t<p>{{event.date.start[0] | date:'MMM d'}}<span *ngIf=\"event.date.end\"> - {{event.date.end[0] | date:'MMM d, yyyy'}}</span>\n\t\t\t\t<span *ngIf=\"event.date.start[1]\"> \n\t\t\t\t\t\t& {{event.date.start[1] | date:'MMM d'}} - {{event.date.end[1] | date:'MMM d, yyyy'}}\n\t\t\t\t\t\t</span>\n\t\t\t</p>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<canvas #bgcanvas id=\"bgcanvas\" width=\"1200\" height=\"600\"></canvas>\n\n<div #eventdetaildiv class=\"eventdetail\">\n\t<a routerLink=\"/events\" routerLinkActive=\"active\" class=\"back\"><span>Back to</span> Cultural Events</a>\n\t<canvas #namecanvas id=\"namecanvas\" width=\"1600\" height=\"400\"></canvas>\n\t<div *ngIf=\"event\">\n\t\t<header>\n\t\t\t<div class=\"event-name\">\n\t\t\t\t<h1>{{event.shortName}}</h1>\n\t\t\t</div>\n\t\t</header>\n\n\t\t<div class=\"event-main\">\n\t\t\t<div class=\"event-row\" *ngFor=\"let desc of event.info.desc; let i = index\">\n\t\t\t\t<div class=\"event-image\">\n\t\t\t\t\t<img [src]=\"'../../events/assets/img/'+event.id+'/'+i+'.jpg'\" width=\"400px\">\n\t\t\t\t</div>\n\t\t\t\t<div class=\"event-brief\">\n\t\t\t\t\t<h3><span>{{desc[0]}}</span><br /><span>{{desc[1]}}</span></h3>\n\t\t\t\t\t<p>{{desc[2]}}</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class=\"event-summary\">\n\t\t\t<p>{{event.name}}</p>\n\t\t\t<span *ngIf=\"event.info.website\"><a target=\"_blank\" rel=\"noopener noreferrer\" [href]=event.info.website>{{event.info.website}}</a></span>\n\t\t\t<p>\n\t\t\t\t<span *ngIf=\"event.location.venue\">{{event.location.venue}}, </span>\n\t\t\t\t<span *ngIf=\"event.location.city\">{{event.location.city}}, </span>\n\t\t\t\t<span *ngIf=\"event.location.state\">{{event.location.state}}, </span> {{event.location.country}}\n\t\t\t</p>\n\t\t\t<p>{{event.date.start[0] | date:'MMM d'}}<span *ngIf=\"event.date.end\"> - {{event.date.end[0] | date:'MMM d, yyyy'}}</span>\n\t\t\t\t<span *ngIf=\"event.date.start[1]\"> \n\t\t\t\t\t\t& {{event.date.start[1] | date:'MMM d'}} - {{event.date.end[1] | date:'MMM d, yyyy'}}\n\t\t\t\t\t\t</span>\n\t\t\t</p>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 
