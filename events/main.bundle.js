@@ -509,35 +509,35 @@ var EventDetailComponent = (function () {
             ctx.bezierCurveTo(50, 80, 720, 110, 750, 80);
             ctx.stroke();*/
             //Name------------------------------------------------------------
-            //let printName: any = function () {
-            ctx.beginPath();
-            ctx.fillStyle = event.info.colors[2];
-            ctx.strokeStyle = event.info.colors[3];
-            ctx.lineWidth = 4;
-            ctx.font = '200px "Ramabhadra", sans-serif';
-            ctx.textAlign = 'center';
-            var nameLength = event.shortName.length;
-            if (nameLength >= 13 && nameLength < 14) {
-                ctx.font = '180px "Ramabhadra", sans-serif';
-            }
-            else if (nameLength >= 14 && nameLength < 16) {
-                ctx.font = '170px "Ramabhadra", sans-serif';
-            }
-            else if (nameLength >= 16) {
-                ctx.font = '135px "Ramabhadra", sans-serif';
-                ctx.fillText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.55);
-                ctx.strokeText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.55);
-                return;
-            }
-            ctx.fillText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.5);
-            ctx.strokeText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.5);
-            // };
-            /*WebFont.load({
+            var printName = function () {
+                ctx.beginPath();
+                ctx.fillStyle = event.info.colors[2];
+                ctx.strokeStyle = event.info.colors[3];
+                ctx.lineWidth = 4;
+                ctx.font = '200px "Ramabhadra", sans-serif';
+                ctx.textAlign = 'center';
+                var nameLength = event.shortName.length;
+                if (nameLength >= 13 && nameLength < 14) {
+                    ctx.font = '180px "Ramabhadra", sans-serif';
+                }
+                else if (nameLength >= 14 && nameLength < 16) {
+                    ctx.font = '170px "Ramabhadra", sans-serif';
+                }
+                else if (nameLength >= 16) {
+                    ctx.font = '135px "Ramabhadra", sans-serif';
+                    ctx.fillText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.55);
+                    ctx.strokeText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.55);
+                    return;
+                }
+                ctx.fillText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.5);
+                ctx.strokeText(event.shortName.toUpperCase(), nameCanvasW / 2, nameCanvasH / 1.5);
+            };
+            WebFont.load({
                 google: {
                     families: ['Ramabhadra']
                 },
-                active: function() { printName() }
-            });*/
+                active: function () { printName(); }
+            });
         });
     };
     __decorate([
