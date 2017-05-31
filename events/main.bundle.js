@@ -30,7 +30,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var GetEventsService = (function () {
     function GetEventsService(http) {
         this.http = http;
-        this.EventsUrl = "./../assets/events.json";
+        this.EventsUrl = "./../events/assets/events.json";
     }
     GetEventsService.prototype.getEvents = function () {
         return this.http.get(this.EventsUrl)
