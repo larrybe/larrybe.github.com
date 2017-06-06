@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Ultra');
+
+header{
+    text-align: center;
+}
+h1{
+    font-size: calc(16vw * .15);
+    margin-bottom: 0;
+}
+a, p{
+    font-family: 'Noto Serif', serif;
+    text-decoration: none;
+}
+a:hover{
+    color: #f25b56;
+}
+h1, h2, .project a{
+    font-family: 'Ultra', serif;
+}
+header a{
+    font-size: calc(16vw * .1);
+    display: inline-block;
+}
+header a:hover{
+    text-decoration: underline;
+}
+.slash{
+    color: #00f;
+    font-size: calc(16vw * .1);
+}
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: calc(16vw * .25);
+    }
+    header a{
+        font-size: calc(16vw * .21);
+    }
+    .slash{
+        font-size: calc(16vw * .2);
+    }
+}

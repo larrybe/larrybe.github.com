@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Front-End Development</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" type="image/png" href="p/favicon.png">
+    <style>
+        html{
+            background: #160e36;
+        }
+        a{
+            color: #f2f2f2;
+        }
+        a div{
+            padding: calc(16vw * .1);
+            border: 1px solid #fff;
+        }
+        a div:hover{
+            border: 1px solid #f25b56;
+        }
+        h2{
+            font-size: calc(16vw * .3);
+            margin: 0;
+        }
+        #main{
+            width: 50vw;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        #main a{
+            margin: calc(16vw * .05) 0;
+        }
+        #main .builtwith{
+            font-size: calc(16vw * .075);
+            margin: 5px;
+        }
+        #main .desc{
+            font-size: calc(16vw * .09);
+            margin: 0;
+        }
+        #main .desc span{
+            color: #f00
+        }
+        @media screen and (max-width: 500px) {
+            #main {
+                width: 100%;
+            }
+            h2{
+                font-size: calc(16vw * .5);
+            }
+            #main .builtwith{
+                font-size: calc(16vw * .12);
+            }
+            #main .desc{
+                font-size: calc(16vw * .15);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="https://larrybe.github.io"><h1>larrybe</h1></a><span class="slash"> / </span>
+        <a href="https://github.com/larrybe">github.com/larrybe</a><span class="slash"> / </span>
+        <a href="mailto:larrybe.dev@gmail.com">larrybe.dev@gmail.com</a>
+    </header>
+    <section id="main">
+        <a href="p/bars.html">
+            <div>
+                <h2>Bars&amp;Lines</h2>
+                <p class="builtwith">Vue.js, D3.js, SVG, SASS</p>
+                <p class="desc">Making charts out of the data I find interesting.</p>
+            </div>
+        </a>
+        <a href="p/wind.html">
+            <div>
+                <h2>wind</h2>
+                <p class="builtwith">babylon.js/WebGL, Web Audio API, WebRTC, 3ds Max</p>
+                <p class="desc">An experiment combining some of the most exciting HTML5 technologies.</p>
+            </div>
+        </a>
+        <a href="p/events.html">
+            <div>
+                <h2>CulturalEvents</h2>
+                <p class="builtwith">Angular, TypeScript, Canvas, SASS</p>
+                <p class="desc">A small list of Cultural events with Angular.</p>
+            </div>
+        </a>
+        <a href="p/paperplane.html">
+            <div>
+                <h2>paperplane</h2>
+                <p class="builtwith">Unity/WebGL, C#</p>
+                <p class="desc"><span>Unfinished</span> WebGL project.</p>
+            </div>
+        </a>
+    </section>
+</body>
+
+</html>
