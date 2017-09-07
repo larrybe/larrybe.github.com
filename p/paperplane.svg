@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210"
+   height="297"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="paperplane"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="paperplane.svg"
+   style="enable-background:new">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient6216"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#00008b;stop-opacity:1;"
+         offset="0"
+         id="stop6214" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.22627417"
+     inkscape:cx="345.5908"
+     inkscape:cy="118.38564"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer8"
+     showgrid="false"
+     inkscape:window-width="1253"
+     inkscape:window-height="691"
+     inkscape:window-x="108"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-page="true">
+    <sodipodi:guide
+       position="-0.75595236,197.30358"
+       orientation="1,0"
+       id="guide5014"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="210.91071,167.06548"
+       orientation="1,0"
+       id="guide5016"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="105.07738,219.2262"
+       orientation="1,0"
+       id="guide5018"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10.156241,153.41271"
+       orientation="1,0"
+       id="guide5070"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-25.891369,42.71131"
+       orientation="0,1"
+       id="guide4578"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-9.4260877,17.472513"
+       orientation="0,1"
+       id="guide4580"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="153.70869,260.91927"
+       orientation="1,0"
+       id="guide6157"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="81.855467,181.07422"
+       orientation="1,0"
+       id="guide6535"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="sky-background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline;opacity:1">
+    <rect
+       style="opacity:1;fill:#bee1e8;fill-opacity:1;stroke:none;stroke-width:2.95062995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4485"
+       width="210"
+       height="297.11694"
+       x="0"
+       y="-0.11309535" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="text">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="10.15624"
+       y="222.58594"
+       id="text6527"><tspan
+         sodipodi:role="line"
+         id="tspan6525"
+         x="10.15624"
+         y="222.58594"
+         style="fill:#00008b;fill-opacity:1;stroke-width:0.26458332">Unity</tspan><tspan
+         sodipodi:role="line"
+         x="10.15624"
+         y="230.52344"
+         style="fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6529">WebGL</tspan><tspan
+         sodipodi:role="line"
+         x="10.15624"
+         y="238.46094"
+         style="fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6531">C#</tspan><tspan
+         sodipodi:role="line"
+         x="10.15624"
+         y="246.39844"
+         style="fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan6533">Javascript</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.69999981px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="9.5361233"
+       y="184.34538"
+       id="text6659"><tspan
+         sodipodi:role="line"
+         id="tspan6657"
+         x="9.5361233"
+         y="184.34538"
+         style="fill:#00008b;fill-opacity:1;stroke-width:0.26458332">Paperplane</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="10.15624"
+       y="192.34727"
+       id="text6665"><tspan
+         sodipodi:role="line"
+         id="tspan6663"
+         x="10.15624"
+         y="192.34727"
+         style="fill:#00008b;fill-opacity:1;stroke-width:0.26458332">A Unity/WebGL project.</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer16"
+     inkscape:label="gray-pattern"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="plane"
+     style="display:inline">
+    <path
+       style="fill:#b7c4c8;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 210,0 81.851293,297 210,297.00385 Z"
+       id="path6537"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 105.07738,243.21201 210,206.67125"
+       id="path6539"
+       inkscape:connector-curvature="0" />
+    <path
+       style="opacity:1;fill:#b7c4c8;fill-opacity:0;stroke:none;stroke-width:25.05496597;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 317.71412,1115.2875 c 0.40511,-1.0693 6.16082,-14.4933 12.79046,-29.8311 l 12.05388,-27.8868 h 101.7607 c 59.32924,0 104.88579,-0.8963 109.25543,-2.1495 25.00614,-7.1716 40.27547,-33.9025 33.39782,-58.46704 -3.38861,-12.10293 -13.40367,-24.39769 -24.47462,-30.04566 -8.0576,-4.11068 -13.31538,-4.35529 -93.61507,-4.35529 h -85.07801 l 7.77924,-18.17502 c 4.27857,-9.99625 8.0282,-18.42399 8.3325,-18.72829 0.51885,-0.51885 226.69113,-79.45384 337.82646,-117.90273 l 50.27087,-17.39194 v 163.4388 163.43877 H 552.49567 c -134.6567,0 -235.20268,-0.8326 -234.78155,-1.9442 z"
+       id="path6559"
+       inkscape:connector-curvature="0"
+       transform="scale(0.26458333)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="link"
+     style="display:inline">
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="link-background"
+       style="display:inline">
+      <a
+         id="wind-link-rect"
+         xlink:href="https://larrybe.github.io/paperplane"
+         xlink:title=""
+         inkscape:label="#a4593">
+        <rect
+           ry="12.4485"
+           y="254.63049"
+           x="53.98901"
+           height="24.896999"
+           width="101.653"
+           id="rect4582"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.29295969;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </a>
+    </g>
+    <a
+       id="wind-link"
+       xlink:href="https://larrybe.github.io/paperplane"
+       inkscape:label="#a4596">
+      <text
+         id="text4587"
+         y="270.23004"
+         x="105.59875"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+           y="270.23004"
+           x="105.59875"
+           id="tspan4585"
+           sodipodi:role="line">see the project<tspan
+   id="tspan4589"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#00008b;fill-opacity:1">&gt;</tspan></tspan></text>
+    </a>
+  </g>
+</svg>

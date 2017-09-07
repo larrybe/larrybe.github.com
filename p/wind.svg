@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210"
+   height="297"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="wind"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="wind.svg"
+   style="enable-background:new">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient6216"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#00008b;stop-opacity:1;"
+         offset="0"
+         id="stop6214" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.32"
+     inkscape:cx="-183.92269"
+     inkscape:cy="356.96005"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer10"
+     showgrid="false"
+     inkscape:window-width="1253"
+     inkscape:window-height="691"
+     inkscape:window-x="108"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     showguides="false"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="-0.75595236,197.30358"
+       orientation="1,0"
+       id="guide5014"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="210.91071,167.06548"
+       orientation="1,0"
+       id="guide5016"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="105.07738,219.2262"
+       orientation="1,0"
+       id="guide5018"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="21.381562,94.613415"
+       orientation="1,0"
+       id="guide5024"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="10.156241,153.41271"
+       orientation="1,0"
+       id="guide5070"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-25.891369,42.71131"
+       orientation="0,1"
+       id="guide4578"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-9.4260877,17.472513"
+       orientation="0,1"
+       id="guide4580"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="153.70869,260.91927"
+       orientation="1,0"
+       id="guide6157"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="sky-background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline;opacity:1"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#bee1e8;fill-opacity:1;stroke:none;stroke-width:2.95062995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4485"
+       width="210"
+       height="297.11694"
+       x="0"
+       y="-0.11309535" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="green-background"
+     style="display:inline">
+    <circle
+       style="opacity:1;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4753"
+       cy="67.077087"
+       cx="104.51041"
+       r="0" />
+    <rect
+       style="opacity:1;fill:#a0ffa4;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5402"
+       width="210"
+       height="205"
+       x="-1.3709068e-006"
+       y="92.003838" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="10.335286"
+       y="112.21057"
+       id="text9710"><tspan
+         sodipodi:role="line"
+         x="10.335286"
+         y="112.21057"
+         id="tspan9684"
+         style="stroke-width:0.26458332"><tspan
+           x="10.335286"
+           y="112.21057"
+           id="tspan9680"
+           style="stroke-width:0.26458332">An experiment combining WebGL, </tspan><tspan
+           dx="0"
+           x="121.0386"
+           y="112.21057"
+           id="tspan9682"
+           style="stroke-width:0.26458332" /></tspan><tspan
+         sodipodi:role="line"
+         x="10.335286"
+         y="120.14807"
+         id="tspan9690"
+         style="stroke-width:0.26458332"><tspan
+           x="10.335286"
+           y="120.14807"
+           id="tspan9686"
+           style="stroke-width:0.26458332">WebRTC and Web Audio API. </tspan><tspan
+           dx="0"
+           x="104.19622"
+           y="120.14807"
+           id="tspan9688"
+           style="stroke-width:0.26458332" /></tspan><tspan
+         sodipodi:role="line"
+         x="10.335286"
+         y="128.08557"
+         id="tspan9694"
+         style="stroke-width:0.26458332"><tspan
+           x="10.335286"
+           y="128.08557"
+           id="tspan9692"
+           style="stroke-width:0.26458332">WebRTC gets the sound, WebAudio API </tspan></tspan><tspan
+         sodipodi:role="line"
+         x="10.335286"
+         y="136.02307"
+         id="tspan9698"
+         style="stroke-width:0.26458332"><tspan
+           x="10.335286"
+           y="136.02307"
+           id="tspan9696"
+           style="stroke-width:0.26458332">processes the sound data which is used to </tspan></tspan><tspan
+         sodipodi:role="line"
+         x="10.335286"
+         y="143.96057"
+         id="tspan9704"
+         style="stroke-width:0.26458332"><tspan
+           x="10.335286"
+           y="143.96057"
+           id="tspan9700"
+           style="stroke-width:0.26458332">change the scene rendered by WebGL.</tspan><tspan
+           dx="0"
+           x="133.80061"
+           y="143.96057"
+           id="tspan9702"
+           style="stroke-width:0.26458332" /></tspan><tspan
+         sodipodi:role="line"
+         x="10.335286"
+         y="143.96057"
+         id="tspan9708"
+         style="stroke-width:0.26458332"><tspan
+           x="10.335286"
+           y="151.89807"
+           id="tspan9706"
+           style="stroke-width:0.26458332" /></tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="windmill-legs"
+     style="opacity:1">
+    <path
+       style="fill:none;stroke:#00008b;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 144.69401,91.947914 9.01468,-58.772173 9.87305,58.694658"
+       id="path6159"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="blades"
+     style="display:inline">
+    <g
+       style="display:inline"
+       id="wind-blades"
+       transform="matrix(0.18779406,0,0,0.18779406,122.75454,7.678685)">
+      <path
+         inkscape:tile-y0="34.153825"
+         inkscape:tile-x0="140.1282"
+         inkscape:tile-h="88.388714"
+         inkscape:tile-w="51.102003"
+         inkscape:tile-cy="137.53971"
+         inkscape:tile-cx="164.92856"
+         inkscape:transform-center-y="-59.191524"
+         inkscape:transform-center-x="-0.75064605"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect5406"
+         d="m 140.69069,38.817635 c 5.55625,-6.085417 44.97292,-6.35 50,0 4.49792,12.7 -20.60634,80.748345 -20.60634,80.748345 -2.38125,3.96875 -6.23227,3.96875 -9.93644,0 0,0 -23.95514,-66.990012 -19.45722,-80.748345 z"
+         style="opacity:1;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <use
+         height="100%"
+         width="100%"
+         inkscape:transform-center-y="63.712262"
+         inkscape:transform-center-x="-176.9452"
+         id="use5831"
+         transform="rotate(60,164.92856,137.53971)"
+         xlink:href="#rect5406"
+         inkscape:tiled-clone-of="#rect5406"
+         y="0"
+         x="0" />
+      <use
+         height="100%"
+         width="100%"
+         inkscape:transform-center-y="139.40819"
+         inkscape:transform-center-x="-176.23994"
+         id="use5833"
+         transform="rotate(120,164.92856,137.53971)"
+         xlink:href="#rect5406"
+         inkscape:tiled-clone-of="#rect5406"
+         y="0"
+         x="0" />
+      <use
+         height="100%"
+         width="100%"
+         inkscape:transform-center-y="160.34052"
+         inkscape:transform-center-x="-120.54056"
+         id="use5835"
+         transform="rotate(180,164.92856,137.53971)"
+         xlink:href="#rect5406"
+         inkscape:tiled-clone-of="#rect5406"
+         y="0"
+         x="0" />
+      <use
+         height="100%"
+         width="100%"
+         inkscape:transform-center-y="138.58573"
+         inkscape:transform-center-x="-65.637229"
+         id="use5837"
+         transform="rotate(-120,164.92856,137.53971)"
+         xlink:href="#rect5406"
+         inkscape:tiled-clone-of="#rect5406"
+         y="0"
+         x="0" />
+      <use
+         height="100%"
+         width="100%"
+         inkscape:transform-center-y="62.889798"
+         inkscape:transform-center-x="-66.342483"
+         id="use5839"
+         transform="rotate(-60,164.92856,137.53971)"
+         xlink:href="#rect5406"
+         inkscape:tiled-clone-of="#rect5406"
+         y="0"
+         x="0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer10"
+     inkscape:label="desc"
+     style="opacity:1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="11.39672"
+       y="219.46727"
+       id="text8657"><tspan
+         sodipodi:role="line"
+         x="11.39672"
+         y="219.46727"
+         id="tspan8645"
+         style="stroke-width:0.26458332"><tspan
+           x="11.39672"
+           y="219.46727"
+           style="font-size:4.93888855px;stroke-width:0.26458332"
+           id="tspan8641">Babylon.js / WebGL</tspan><tspan
+           dx="0"
+           x="60.235767"
+           y="219.46727"
+           style="font-size:4.93888855px;stroke-width:0.26458332"
+           id="tspan8643" /></tspan><tspan
+         sodipodi:role="line"
+         x="11.39672"
+         y="226.52284"
+         id="tspan8651"
+         style="stroke-width:0.26458332"><tspan
+           x="11.39672"
+           y="226.52284"
+           style="font-size:4.93888855px;stroke-width:0.26458332"
+           id="tspan8647">WebRTV</tspan><tspan
+           dx="0"
+           x="31.769636"
+           y="226.52284"
+           style="font-size:4.93888855px;stroke-width:0.26458332"
+           id="tspan8649" /></tspan><tspan
+         sodipodi:role="line"
+         x="11.39672"
+         y="233.5784"
+         id="tspan8655"
+         style="stroke-width:0.26458332"><tspan
+           x="11.39672"
+           y="233.5784"
+           style="font-size:4.93888855px;stroke-width:0.26458332"
+           id="tspan8653">WebAudio API</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="11.39672"
+         y="240.63396"
+         style="stroke-width:0.26458332"
+         id="tspan7279">JavaScript</tspan><tspan
+         sodipodi:role="line"
+         x="11.39672"
+         y="247.68951"
+         style="stroke-width:0.26458332"
+         id="tspan7281">CSS</tspan><tspan
+         sodipodi:role="line"
+         x="11.39672"
+         y="254.74507"
+         style="stroke-width:0.26458332"
+         id="tspan7283">HTML</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:25.39999962px;line-height:24.39999962;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="10.156486"
+       y="112.47523"
+       id="text9569"><tspan
+         sodipodi:role="line"
+         x="10.156486"
+         y="429.65341"
+         id="tspan9567"
+         style="line-height:7;stroke-width:0.26458332" /></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer11"
+     inkscape:label="title">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:25.39999962px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#a0ffa4;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="9.1333447"
+       y="92.125137"
+       id="wind-title"
+       inkscape:label="#windtitle"><tspan
+         sodipodi:role="line"
+         x="9.1333447"
+         y="92.125137"
+         id="tspan6215"
+         style="font-size:26.81111145px;stroke-width:0.26458332"><tspan
+           x="9.1333447"
+           y="92.125137"
+           id="tspan6213"
+           style="font-size:26.81111145px;stroke-width:0.26458332">WIND</tspan></tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="link">
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="link-background">
+      <a
+         id="wind-link-rect"
+         xlink:href="https://larrybe.github.io/wind"
+         xlink:title=""
+         inkscape:label="#a4593">
+        <rect
+           ry="12.4485"
+           y="254.63049"
+           x="53.98901"
+           height="24.896999"
+           width="101.653"
+           id="rect4582"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.29295969;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      </a>
+    </g>
+    <a
+       id="wind-link"
+       xlink:href="https://larrybe.github.io/wind"
+       inkscape:label="#a4596">
+      <text
+         id="text4587"
+         y="270.23004"
+         x="105.59875"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+           y="270.23004"
+           x="105.59875"
+           id="tspan4585"
+           sodipodi:role="line">see the project<tspan
+   id="tspan4589"
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#00008b;fill-opacity:1">&gt;</tspan></tspan></text>
+    </a>
+  </g>
+</svg>

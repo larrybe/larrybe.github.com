@@ -1,41 +1,142 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Ultra');
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
 
 header{
+    width: 100%;
     text-align: center;
+    margin-top: 10px; 
 }
-h1{
-    font-size: calc(16vw * .15);
-    margin-bottom: 0;
+
+
+h1, h2, h3{
+    display: inline;
 }
-a, p{
-    font-family: 'Noto Serif', serif;
-    text-decoration: none;
+
+h1::after, h2::after{
+    content: ' / ';
+    color: #969696;
 }
-a:hover{
-    color: #f25b56;
-}
-h1, h2, .project a{
-    font-family: 'Ultra', serif;
-}
+
 header a{
-    font-size: calc(16vw * .1);
-    display: inline-block;
+    text-decoration: none;
+    color: #134c82;
 }
+
 header a:hover{
     text-decoration: underline;
 }
-.slash{
-    color: #00f;
-    font-size: calc(16vw * .1);
+
+header p{
+    margin: 0;
+    padding: 0;
 }
-@media screen and (max-width: 500px) {
+
+section{
+    text-align: center;
+    width: 100%;
+}
+
+svg{
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 1601px) {
     h1{
-        font-size: calc(16vw * .25);
+        font-size: calc(16vw * .12);
     }
-    header a{
-        font-size: calc(16vw * .21);
+
+    h2{
+        font-size: calc(16vw * .09);
     }
-    .slash{
-        font-size: calc(16vw * .2);
+
+    h3{
+        font-size: calc(16vw * .08);
+    }
+
+    h1::after, h2::after{
+        font-size: calc(16vw * .07);
+    }
+
+    header p{
+        font-size: calc(16vw * .08);
+    }
+
+    section{
+        margin: calc(16vw * .07) 0;
+    }
+
+    svg{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    h1{
+        font-size: 20px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
+    h1::after, h2::after{
+        font-size: 12px;
+    }
+
+    header p{
+        font-size: 16px;
+    }
+
+    section{
+        margin: 20px 0;
+    }
+
+    svg{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1{
+        font-size: 17px;
+    }
+
+    h2{
+        font-size: 15px;
+    }
+
+    h3{
+        font-size: 14px;
+    }
+
+    h1::after, h2::after{
+    content: none;
+    }
+
+    h1, h2, h3{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    header p{
+        font-size: 14px;
+    }
+
+    section{
+        margin: 15px 0;
+    }
+
+    svg{
+        width: 90%;
     }
 }

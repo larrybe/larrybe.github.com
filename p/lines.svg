@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="charts"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297"
+   width="210"
+   sodipodi:docname="lines.svg"
+   inkscape:version="0.92.1 r15371"
+   style="enable-background:new">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1250"
+     inkscape:window-height="726"
+     id="namedview7332"
+     showgrid="false"
+     inkscape:zoom="0.2973261"
+     inkscape:cx="441.19527"
+     inkscape:cy="613.43492"
+     inkscape:window-x="107"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="charts" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     id="layer1">
+    <rect
+       y="-0.11309535"
+       x="0"
+       height="297.11694"
+       width="210"
+       id="rect4485"
+       style="opacity:1;fill:#bee1e8;fill-opacity:1;stroke:none;stroke-width:2.95062995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
+  <g
+     style="display:inline"
+     id="layer2">
+    <path
+       id="path4606"
+       d="M -9.4260877,32.589827 218.31357,-131.12059"
+       style="fill:none;stroke:#00008a;stroke-width:1.12699997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4976"
+       xlink:href="#path4606"
+       y="0"
+       x="0"
+       style="opacity:0.95999995" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4978"
+       transform="translate(0,49.387532)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4980"
+       transform="translate(0,98.775065)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4982"
+       transform="translate(0,148.1626)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4984"
+       transform="translate(0,197.55013)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4986"
+       transform="translate(0,246.93766)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4988"
+       transform="translate(0,296.32521)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4990"
+       transform="translate(0,345.71273)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+    <use
+       height="100%"
+       width="100%"
+       id="use4992"
+       transform="translate(0,395.10025)"
+       xlink:href="#path4606"
+       y="0"
+       x="0" />
+  </g>
+  <g
+     id="layer4">
+    <rect
+       y="152.38193"
+       x="15.501631"
+       height="21.674"
+       width="68.570457"
+       id="rect4554"
+       style="opacity:1;fill:#bee1e8;fill-opacity:1;stroke:none;stroke-width:2.76128221;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="179.13414"
+       x="17.639788"
+       height="31.003265"
+       width="163.90199"
+       id="rect4565"
+       style="opacity:1;fill:#bee1e8;fill-opacity:1;stroke:none;stroke-width:3.15065837;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       y="216.28459"
+       x="280.633"
+       height="1.6036172"
+       width="3.7417734"
+       id="rect4567"
+       style="opacity:1;fill:#bee1e8;fill-opacity:1;stroke:none;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
+  <g
+     style="opacity:1"
+     id="layer3">
+    <text
+       id="bandl-title"
+       y="170.31052"
+       x="17.472294"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00008c;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:19.04999924px;fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan5059"
+         y="170.31052"
+         x="17.472294">Charts<tspan
+   id="tspan5057"
+   style="font-size:19.04999924px;fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+   y="170.31052"
+   x="17.472294" /></tspan></text>
+  </g>
+  <g
+     id="layer7">
+    <text
+       id="text5298"
+       y="224.52925"
+       x="19.869656"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         id="tspan5300"
+         style="font-size:6.3499999px;line-height:0;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+         y="224.52925"
+         x="19.869656">Vue.js</tspan><tspan
+         id="tspan5304"
+         style="font-size:6.3499999px;line-height:0;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+         y="230.87926"
+         x="19.869656">D3.js</tspan><tspan
+         id="tspan5306"
+         style="font-size:6.3499999px;line-height:0;letter-spacing:0px;word-spacing:0px;fill:#00008b;fill-opacity:1;stroke-width:0.26458332"
+         y="237.22925"
+         x="19.869656">SASS</tspan></text>
+    <text
+       id="text4551"
+       y="179.08148"
+       x="19.602467"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#00008b;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="stroke-width:0.26458332"
+         id="tspan4533"
+         y="184.23108"
+         x="19.602467" /><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan4537"
+         y="186.13705"
+         x="19.602467"><tspan
+           style="font-size:6.3499999px;stroke-width:0.26458332"
+           id="tspan4535"
+           y="186.13705"
+           x="19.602467">This project serves as a folder for the charts I </tspan></tspan><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan4541"
+         y="193.19261"
+         x="19.602467"><tspan
+           style="font-size:6.3499999px;stroke-width:0.26458332"
+           id="tspan4539"
+           y="193.19261"
+           x="19.602467">make out of data I find interesting. I chose Vue.js </tspan></tspan><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan4545"
+         y="200.24817"
+         x="19.602467"><tspan
+           style="font-size:6.3499999px;stroke-width:0.26458332"
+           id="tspan4543"
+           y="200.24817"
+           x="19.602467">as the front end framework and so far all charts </tspan></tspan><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan4549"
+         y="207.30374"
+         x="19.602467"><tspan
+           style="font-size:6.3499999px;stroke-width:0.26458332"
+           id="tspan4547"
+           y="207.30374"
+           x="19.602467">have been built with the help of D3.</tspan></tspan></text>
+  </g>
+  <g
+     id="layer6">
+    <g
+       id="layer5">
+      <a
+         xlink:title=""
+         xlink:href="https://larrybe.github.io/barsandlines"
+         id="bl-link-rect">
+        <rect
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.29295969;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4582"
+           width="101.653"
+           height="24.896999"
+           x="53.98901"
+           y="254.63049"
+           ry="12.4485" />
+      </a>
+    </g>
+    <a
+       xlink:href="https://larrybe.github.io/barsandlines"
+       id="bl-link">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="105.59875"
+         y="270.23004"
+         id="text4587"><tspan
+           id="tspan4585"
+           x="105.59875"
+           y="270.23004"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#00008b;fill-opacity:1;stroke-width:0.26458332">see the project<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#00008b;fill-opacity:1"
+   id="tspan4589">&gt;</tspan></tspan></text>
+    </a>
+  </g>
+</svg>
