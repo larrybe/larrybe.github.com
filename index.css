@@ -1,33 +1,30 @@
 html, body{
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+#container{
+    display: flex;
 }
 
 header{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px; 
-}
-
-
-h1, h2, h3{
-    display: inline;
-}
-
-h1::after, h2::after{
-    content: ' / ';
-    color: #969696;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: lighter;
 }
 
 header a{
-    text-decoration: none;
-    color: #134c82;
+    text-decoration: underline;
+    color: #000;
 }
 
 header a:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 header p{
@@ -35,108 +32,113 @@ header p{
     padding: 0;
 }
 
-section{
-    text-align: center;
+#container{
     width: 100%;
+    height: 100%;
+}
+
+.flex-item{
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.project a{
+    text-decoration: none;
 }
 
 svg{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
     margin: 0 auto;
+    -webkit-transition: border .3s;
+    transition: border .3s;
 }
 
-
-@media screen and (min-width: 1601px) {
-    h1{
-        font-size: calc(16vw * .12);
+@media screen and (min-width: 700px) {
+    #container{
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    h2{
-        font-size: calc(16vw * .09);
+    .flex-item{
+        width: 20%;
+        padding: 1%;
     }
 
-    h3{
-        font-size: calc(16vw * .08);
+    header h1{
+        font-size: 4.8vw;
+        margin: 0;
     }
 
-    h1::after, h2::after{
-        font-size: calc(16vw * .07);
+    header h2{
+        font-size: 1.6vw;
+        margin: 0;
     }
 
-    header p{
-        font-size: calc(16vw * .08);
+    #gh-link-span{
+        display: inline;
+        font-size: 3.2vw;
     }
 
-    section{
-        margin: calc(16vw * .07) 0;
+    header h3{
+        font-size: 3.36vw;
+        margin: 0;
+    }
+
+    #email-link-span{
+        display: block;
+        font-size: 2.4vw;
+    }
+
+    h1, h2, h3{
+        display: block;
     }
 
     svg{
-        width: 35%;
+        border: .2vw solid rgba(0, 0, 139, 0);
+    }
+
+    .project svg:hover{
+        border: .2vw solid #00008b;
     }
 }
 
-@media screen and (max-width: 1600px) {
-    h1{
-        font-size: 20px;
+@media screen and (max-width: 699px) {
+    #container{
+        flex-direction: column;
+    }
+
+    .flex-item{
+        width: 75%;
+        padding: 1%;
+    }
+
+    h1, h2, h3{
+        display: block;
+        margin: 0;
+    }
+
+    h1, h3{
+        font-size: 28px;
     }
 
     h2{
         font-size: 18px;
     }
 
-    h3{
-        font-size: 16px;
+    #gh-link-span{
+        font-size: 28px;
     }
 
-    h1::after, h2::after{
-        font-size: 12px;
+    #email-link-span{
+        font-size: 21px;
     }
-
-    header p{
-        font-size: 16px;
-    }
-
-    section{
-        margin: 20px 0;
-    }
-
+    
     svg{
-        width: 500px;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    h1{
-        font-size: 17px;
+        border: 2px solid rgba(0, 0, 139, 0);
     }
 
-    h2{
-        font-size: 15px;
-    }
-
-    h3{
-        font-size: 14px;
-    }
-
-    h1::after, h2::after{
-    content: none;
-    }
-
-    h1, h2, h3{
-        display: block;
-        margin: 0;
-        padding: 0;
-    }
-
-    header p{
-        font-size: 14px;
-    }
-
-    section{
-        margin: 15px 0;
-    }
-
-    svg{
-        width: 90%;
+    .project svg:hover{
+        border: 2px solid #00008b;
     }
 }
