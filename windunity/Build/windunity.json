@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "windunity.data.unityweb",
+"asmCodeUrl": "windunity.asm.code.unityweb",
+"asmMemoryUrl": "windunity.asm.memory.unityweb",
+"asmFrameworkUrl": "windunity.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
